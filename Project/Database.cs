@@ -10,7 +10,6 @@ namespace Project
     class Database
     {
         SqlConnection sqlConnection = new SqlConnection(@"Data Source=DESKTOP-AJR95T9\SQLEXPRESS; Initial Catalog=Hospital;Integrated Security=true ");
-        public int a = 0;
 
         public void openconnection()
         {

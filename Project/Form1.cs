@@ -25,19 +25,12 @@ namespace Project
         private bool newRowAdding = false;
 
 
-        Form2 form2 = new Form2();
-        Database db = new Database();
 
         
         public Form1()
         {
+    
             InitializeComponent();
-            //tabPage2.Parent = null;
-            //if (db.a == 1)
-            //{
-            //    tabPage2.Parent = tabControl1;
-            //}
-            
 
         }
 
@@ -46,7 +39,7 @@ namespace Project
             timer1.Interval = 10;
             timer1.Enabled = true;
             timer1.Start();
-            
+
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -57,6 +50,7 @@ namespace Project
 
         private void button2_Click(object sender, EventArgs e)
         {
+            Form2 form2 = new Form2();
             form2.ShowDialog();
         }
 
@@ -71,11 +65,7 @@ namespace Project
 
         }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-
-            
-        }
+        
     
     
     private void LoadData()
@@ -237,11 +227,13 @@ namespace Project
 
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
-                throw;
+                MessageBox.Show(ex.Message, "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        
     }
 }
