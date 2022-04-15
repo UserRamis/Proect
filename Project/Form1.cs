@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Data.OleDb;
+using System.IO;
+using System.Drawing.Printing;
 
 namespace Project
 {
@@ -24,9 +26,9 @@ namespace Project
 
         private bool newRowAdding = false;
 
+        private string result = "";
 
 
-        
         public Form1()
         {
     
@@ -183,26 +185,14 @@ namespace Project
 
                         newRowAdding = false;
                     }
-                    else if (task == "Update")
-                    {
-
-                    }
-
+                    
                     ReloadData1();
-
-
-
                 }
             }
             catch (Exception ex)
             {
-
                 MessageBox.Show(ex.Message, "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
-
-
-
         }
 
         private void dataGridView1_UserAddedRow(object sender, DataGridViewRowEventArgs e)
@@ -222,17 +212,14 @@ namespace Project
                     dataGridView1[10, lastRow] = linkCell;
 
                     row.Cells["Delete"].Value = "Insert";
-
-
                 }
             }
             catch (Exception ex)
             {
-
                 MessageBox.Show(ex.Message, "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-            //ДРУГОЙЙЙЙЙЙЙЙЙЙЙЙЙЙЙЙЙЙЙЙЙЙЙЙ
+            //datagridview2
         private void button2_Click_1(object sender, EventArgs e)
         {
             sqlConnection = new SqlConnection(@"Data Source=DESKTOP-AJR95T9\SQLEXPRESS; Initial Catalog=Hospital;Integrated Security=true ");
@@ -293,8 +280,6 @@ namespace Project
                             dataSet.Tables["Patients"].Rows[rowIndex].Delete();
 
                             sqlDataAdapter.Update(dataSet, "Patients");
-
-
                         }
                     }
                     else if (task == "Insert")
@@ -328,21 +313,12 @@ namespace Project
                         sqlDataAdapter.Update(dataSet, "Patients");
 
                         newRowAdding = false;
-                    }
-                    else if (task == "Update")
-                    {
-
-                    }
-
+                    }                  
                     ReloadData2();
-
-
-
                 }
             }
             catch (Exception ex)
             {
-
                 MessageBox.Show(ex.Message, "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             ReloadData2();
@@ -367,7 +343,6 @@ namespace Project
             }
             catch (Exception ex)
             {
-
                 MessageBox.Show(ex.Message, "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
@@ -395,7 +370,6 @@ namespace Project
             }
             catch (Exception ex)
             {
-
                 MessageBox.Show(ex.Message, "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
@@ -404,5 +378,47 @@ namespace Project
         {
             ReloadData2();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectTab(tabPage6);
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            using (StreamWriter w = File.AppendText(@"Жалобная книга.txt"))
+            {
+                w.WriteLine("ФИО: "+textBox1.Text + "\n"+ "Жалоба: "+ textBox2.Text);
+            }
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            // задаем текст для печати
+            result = textBox1.Text;
+            result += textBox2.Text;
+            // объект для печати
+            PrintDocument printDocument = new PrintDocument();
+            // обработчик события печати
+            printDocument.PrintPage += PrintPageHandler;
+            // диалог настройки печати
+            PrintDialog printDialog = new PrintDialog();
+            // установка объекта печати для его настройки
+            printDialog.Document = printDocument;
+            // если в диалоге было нажато ОК
+            if (printDialog.ShowDialog() == DialogResult.OK)
+                printDialog.Document.Print(); // печатаем
+        }
+    
+        void PrintPageHandler(object sender, PrintPageEventArgs e)
+        {
+            // печать строки result
+            e.Graphics.DrawString(result, new Font("Arial", 14), Brushes.Black, 0, 0);
+        }
+    
+   
+    
+    
+    
     }
 }
