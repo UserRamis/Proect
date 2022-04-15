@@ -50,8 +50,7 @@ namespace Project
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Form2 form2 = new Form2();
-            form2.ShowDialog();
+            
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -60,7 +59,7 @@ namespace Project
 
             sqlConnection.Open();
 
-            LoadData();
+            LoadData1();
 
 
         }
@@ -68,7 +67,7 @@ namespace Project
         
     
     
-    private void LoadData()
+    private void LoadData1()
         {
             try
             {
@@ -102,7 +101,7 @@ namespace Project
 
 
 
-        private void ReloadData()
+        private void ReloadData1()
         {
             try
             {
@@ -128,7 +127,7 @@ namespace Project
 
         private void button6_Click(object sender, EventArgs e)
         {
-            ReloadData();
+            ReloadData1();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -189,7 +188,7 @@ namespace Project
 
                     }
 
-                    ReloadData();
+                    ReloadData1();
 
 
 
@@ -233,7 +232,177 @@ namespace Project
                 MessageBox.Show(ex.Message, "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+            //ДРУГОЙЙЙЙЙЙЙЙЙЙЙЙЙЙЙЙЙЙЙЙЙЙЙЙ
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            sqlConnection = new SqlConnection(@"Data Source=DESKTOP-AJR95T9\SQLEXPRESS; Initial Catalog=Hospital;Integrated Security=true ");
 
-        
+            sqlConnection.Open();
+
+            LoadData2();
+        }
+
+        private void LoadData2()
+        {
+            try
+            {
+                sqlDataAdapter = new SqlDataAdapter("SELECT *, 'Delete' AS [Delete] FROM Patients", sqlConnection);
+
+                sqlBuilder = new SqlCommandBuilder(sqlDataAdapter);
+
+                sqlBuilder.GetInsertCommand();
+                sqlBuilder.GetUpdateCommand();
+                sqlBuilder.GetDeleteCommand();
+
+                dataSet = new DataSet();
+
+                sqlDataAdapter.Fill(dataSet, "Patients");
+
+                dataGridView2.DataSource = dataSet.Tables["Patients"];
+
+                for (int i = 0; i < dataGridView2.Rows.Count; i++)
+                {
+                    DataGridViewLinkCell linkCell = new DataGridViewLinkCell();
+
+                    dataGridView2[12, i] = linkCell;
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message, "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                if (e.ColumnIndex == 12)
+                {
+                    string task = dataGridView2.Rows[e.RowIndex].Cells[12].Value.ToString();
+
+                    if (task == "Delete")
+                    {
+                        if (MessageBox.Show("Удалить эту строку?", "Удаление", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                        {
+                            int rowIndex = e.RowIndex;
+
+                            dataGridView2.Rows.RemoveAt(rowIndex);
+
+                            dataSet.Tables["Patients"].Rows[rowIndex].Delete();
+
+                            sqlDataAdapter.Update(dataSet, "Patients");
+
+
+                        }
+                    }
+                    else if (task == "Insert")
+                    {
+                        int rowIndex = dataGridView2.Rows.Count - 2;
+
+                        DataRow row1 = dataSet.Tables["Patients"].NewRow();
+
+                        row1["ID пациента"] = dataGridView2.Rows[rowIndex].Cells["ID пациента"].Value;
+                        row1["ФИО"] = dataGridView2.Rows[rowIndex].Cells["ФИО"].Value;
+                        row1["Возраст"] = dataGridView2.Rows[rowIndex].Cells["Возраст"].Value;
+                        row1["Группа крови"] = dataGridView2.Rows[rowIndex].Cells["Группа крови"].Value;
+                        row1["Адрес"] = dataGridView2.Rows[rowIndex].Cells["Адрес"].Value;
+                        row1["Паспортные данные"] = dataGridView2.Rows[rowIndex].Cells["Паспортные данные"].Value;
+                        row1["Болезнь"] = dataGridView2.Rows[rowIndex].Cells["Болезнь"].Value;
+                        row1["СНИЛС"] = dataGridView2.Rows[rowIndex].Cells["СНИЛС"].Value;
+                        row1["Номер палаты"] = dataGridView2.Rows[rowIndex].Cells["Номер палаты"].Value;
+                        row1["Лечащий врач"] = dataGridView2.Rows[rowIndex].Cells["Лечащий врач"].Value;
+                        row1["№ Участка"] = dataGridView2.Rows[rowIndex].Cells["№ Участка"].Value;
+                        row1["Дата поступления в стационар"] = dataGridView2.Rows[rowIndex].Cells["Дата поступления в стационар"].Value;
+
+
+                        dataSet.Tables["Patients"].Rows.Add(row1);
+
+                        dataSet.Tables["Patients"].Rows.RemoveAt(dataSet.Tables["Patients"].Rows.Count - 1);
+
+                        dataGridView2.Rows.RemoveAt(dataGridView2.Rows.Count - 2);
+
+                        dataGridView2.Rows[e.RowIndex].Cells[12].Value = "Delete";
+
+                        sqlDataAdapter.Update(dataSet, "Patients");
+
+                        newRowAdding = false;
+                    }
+                    else if (task == "Update")
+                    {
+
+                    }
+
+                    ReloadData2();
+
+
+
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message, "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            ReloadData2();
+        }
+
+        private void ReloadData2()
+        {
+            try
+            {
+                dataSet.Tables["Patients"].Clear();
+
+                sqlDataAdapter.Fill(dataSet, "Patients");
+
+                dataGridView2.DataSource = dataSet.Tables["Patients"];
+
+                for (int i = 0; i < dataGridView2.Rows.Count; i++)
+                {
+                    DataGridViewLinkCell linkCell = new DataGridViewLinkCell();
+
+                    dataGridView2[12, i] = linkCell;
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message, "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void dataGridView2_UserAddedRow(object sender, DataGridViewRowEventArgs e)
+        {
+            try
+            {
+                if (newRowAdding == false)
+                {
+                    newRowAdding = true;
+
+                    int lastRow = dataGridView2.Rows.Count - 2;
+
+                    DataGridViewRow row = dataGridView2.Rows[lastRow];
+
+                    DataGridViewLinkCell linkCell = new DataGridViewLinkCell();
+
+                    dataGridView2[12, lastRow] = linkCell;
+
+                    row.Cells["Delete"].Value = "Insert";
+
+
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message, "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            ReloadData2();
+        }
     }
 }
