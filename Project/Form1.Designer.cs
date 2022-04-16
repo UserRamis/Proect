@@ -39,7 +39,7 @@ namespace Project
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttoncomplaintbook = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
@@ -52,7 +52,7 @@ namespace Project
             this.label7 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.buttonunload1 = new System.Windows.Forms.Button();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.button8 = new System.Windows.Forms.Button();
@@ -75,6 +75,7 @@ namespace Project
             this.label8 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.button9 = new System.Windows.Forms.Button();
+            this.label15 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -98,10 +99,11 @@ namespace Project
             this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Controls.Add(this.tabPage5);
             this.tabControl1.Controls.Add(this.tabPage6);
-            this.tabControl1.Location = new System.Drawing.Point(-3, 1);
+            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1273, 512);
+            this.tabControl1.Size = new System.Drawing.Size(1270, 521);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -112,22 +114,23 @@ namespace Project
             this.tabPage1.Controls.Add(this.label3);
             this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(this.label1);
-            this.tabPage1.Controls.Add(this.button1);
+            this.tabPage1.Controls.Add(this.buttoncomplaintbook);
             this.tabPage1.Controls.Add(this.pictureBox2);
             this.tabPage1.Controls.Add(this.pictureBox1);
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1265, 483);
+            this.tabPage1.Size = new System.Drawing.Size(1262, 492);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "О поликлинике";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // label6
             // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label6.Location = new System.Drawing.Point(69, 449);
+            this.label6.Location = new System.Drawing.Point(69, 454);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(142, 20);
             this.label6.TabIndex = 8;
@@ -135,9 +138,10 @@ namespace Project
             // 
             // label5
             // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.Location = new System.Drawing.Point(69, 412);
+            this.label5.Location = new System.Drawing.Point(69, 417);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(132, 20);
             this.label5.TabIndex = 7;
@@ -156,54 +160,59 @@ namespace Project
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(246, 412);
+            this.label3.Location = new System.Drawing.Point(246, 417);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(0, 20);
             this.label3.TabIndex = 5;
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(578, 427);
+            this.label2.Location = new System.Drawing.Point(506, 445);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(346, 25);
+            this.label2.Size = new System.Drawing.Size(515, 25);
             this.label2.TabIndex = 4;
-            this.label2.Text = "Горячая линия: 8-800-555-35-35.";
+            this.label2.Text = "Горячая линия тех. поддержки: 8-800-555-35-35.";
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(6, 3);
+            this.label1.Location = new System.Drawing.Point(6, 8);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(336, 132);
+            this.label1.Size = new System.Drawing.Size(341, 96);
             this.label1.TabIndex = 3;
-            this.label1.Text = "ГПБ Кремлевская №35\r\n           г. Казань,\r\nул. Кремлевская 35,\r\nрежим работы:\r\nс" +
-    " 8.30 до 19:30.\r\n\r\n";
+            this.label1.Text = "ГАУЗ городская поликлиника № 21\r\nстуденческая поликлиника\r\nрежим работы:\r\nс 8.30 " +
+    "до 19:30.\r\n\r\n";
             // 
-            // button1
+            // buttoncomplaintbook
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(73, 326);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(173, 64);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Жалобная книга.";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.buttoncomplaintbook.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.buttoncomplaintbook.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttoncomplaintbook.Location = new System.Drawing.Point(38, 317);
+            this.buttoncomplaintbook.Name = "buttoncomplaintbook";
+            this.buttoncomplaintbook.Size = new System.Drawing.Size(173, 64);
+            this.buttoncomplaintbook.TabIndex = 2;
+            this.buttoncomplaintbook.Text = "Жалобная книга.";
+            this.buttoncomplaintbook.UseVisualStyleBackColor = true;
+            this.buttoncomplaintbook.Click += new System.EventHandler(this.buttoncomplaintbook_Click);
             // 
             // pictureBox2
             // 
+            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(47, 138);
+            this.pictureBox2.Location = new System.Drawing.Point(6, 107);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(224, 182);
+            this.pictureBox2.Size = new System.Drawing.Size(226, 176);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(348, 0);
             this.pictureBox1.Name = "pictureBox1";
@@ -220,23 +229,26 @@ namespace Project
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1265, 483);
+            this.tabPage2.Size = new System.Drawing.Size(1262, 492);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = " Сотрудники";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(410, 430);
+            this.button6.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.button6.Location = new System.Drawing.Point(426, 429);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(135, 47);
+            this.button6.Size = new System.Drawing.Size(155, 47);
             this.button6.TabIndex = 6;
-            this.button6.Text = "Обновить";
+            this.button6.Text = "Обновить список";
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // dataGridView1
             // 
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(23, 4);
             this.dataGridView1.Name = "dataGridView1";
@@ -249,11 +261,12 @@ namespace Project
             // 
             // button5
             // 
+            this.button5.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.button5.Location = new System.Drawing.Point(141, 429);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(161, 47);
             this.button5.TabIndex = 4;
-            this.button5.Text = "Выгрузить";
+            this.button5.Text = "Выгрузить список";
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
@@ -265,7 +278,7 @@ namespace Project
             this.tabPage3.Location = new System.Drawing.Point(4, 25);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1265, 483);
+            this.tabPage3.Size = new System.Drawing.Size(1262, 492);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Загруженность врачей";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -297,18 +310,18 @@ namespace Project
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(819, 72);
             this.label7.TabIndex = 0;
-            this.label7.Text = "Уважаемые сотрудники! График и расписание обновляется каждую неделю в 04:00.Проси" +
-    "м отнестись с пониманием.";
+            this.label7.Text = "Уважаемые сотрудники! График и расписание обновляется каждую cубботу в 04:00.Прос" +
+    "им отнестись с пониманием.";
             // 
             // tabPage4
             // 
             this.tabPage4.Controls.Add(this.button3);
-            this.tabPage4.Controls.Add(this.button2);
+            this.tabPage4.Controls.Add(this.buttonunload1);
             this.tabPage4.Controls.Add(this.dataGridView2);
             this.tabPage4.Location = new System.Drawing.Point(4, 25);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(1265, 483);
+            this.tabPage4.Size = new System.Drawing.Size(1262, 492);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Пациенты";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -319,19 +332,19 @@ namespace Project
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(132, 38);
             this.button3.TabIndex = 2;
-            this.button3.Text = "Обновить";
+            this.button3.Text = "Обновить список";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button2
+            // buttonunload1
             // 
-            this.button2.Location = new System.Drawing.Point(106, 418);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(146, 45);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Выгрузить";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            this.buttonunload1.Location = new System.Drawing.Point(106, 418);
+            this.buttonunload1.Name = "buttonunload1";
+            this.buttonunload1.Size = new System.Drawing.Size(146, 45);
+            this.buttonunload1.TabIndex = 1;
+            this.buttonunload1.Text = "Выгрузить список";
+            this.buttonunload1.UseVisualStyleBackColor = true;
+            this.buttonunload1.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // dataGridView2
             // 
@@ -347,6 +360,7 @@ namespace Project
             // 
             // tabPage5
             // 
+            this.tabPage5.Controls.Add(this.label15);
             this.tabPage5.Controls.Add(this.button9);
             this.tabPage5.Controls.Add(this.button8);
             this.tabPage5.Controls.Add(this.textBox7);
@@ -362,7 +376,7 @@ namespace Project
             this.tabPage5.Location = new System.Drawing.Point(4, 25);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(1265, 483);
+            this.tabPage5.Size = new System.Drawing.Size(1262, 483);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Запись на приём";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -374,41 +388,41 @@ namespace Project
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(264, 77);
             this.button8.TabIndex = 14;
-            this.button8.Text = "Сохранить в базу данных и файл";
+            this.button8.Text = "Сохранить в базу данных и в файл";
             this.button8.UseVisualStyleBackColor = true;
             this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // textBox7
             // 
-            this.textBox7.Location = new System.Drawing.Point(234, 271);
+            this.textBox7.Location = new System.Drawing.Point(234, 327);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(613, 22);
             this.textBox7.TabIndex = 11;
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(234, 218);
+            this.textBox6.Location = new System.Drawing.Point(234, 270);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(613, 22);
             this.textBox6.TabIndex = 10;
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(234, 170);
+            this.textBox5.Location = new System.Drawing.Point(234, 218);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(613, 22);
             this.textBox5.TabIndex = 9;
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(234, 121);
+            this.textBox4.Location = new System.Drawing.Point(234, 169);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(613, 22);
             this.textBox4.TabIndex = 8;
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(234, 70);
+            this.textBox3.Location = new System.Drawing.Point(234, 122);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(613, 22);
             this.textBox3.TabIndex = 7;
@@ -417,7 +431,7 @@ namespace Project
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label14.Location = new System.Drawing.Point(85, 271);
+            this.label14.Location = new System.Drawing.Point(85, 323);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(118, 25);
             this.label14.TabIndex = 4;
@@ -427,7 +441,7 @@ namespace Project
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label13.Location = new System.Drawing.Point(85, 215);
+            this.label13.Location = new System.Drawing.Point(85, 266);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(69, 25);
             this.label13.TabIndex = 3;
@@ -437,7 +451,7 @@ namespace Project
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label12.Location = new System.Drawing.Point(85, 170);
+            this.label12.Location = new System.Drawing.Point(85, 218);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(80, 25);
             this.label12.TabIndex = 2;
@@ -447,7 +461,7 @@ namespace Project
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label11.Location = new System.Drawing.Point(85, 118);
+            this.label11.Location = new System.Drawing.Point(85, 169);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(89, 25);
             this.label11.TabIndex = 1;
@@ -457,7 +471,7 @@ namespace Project
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label10.Location = new System.Drawing.Point(85, 66);
+            this.label10.Location = new System.Drawing.Point(85, 122);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(60, 25);
             this.label10.TabIndex = 0;
@@ -474,7 +488,7 @@ namespace Project
             this.tabPage6.Location = new System.Drawing.Point(4, 25);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(1265, 483);
+            this.tabPage6.Size = new System.Drawing.Size(1262, 483);
             this.tabPage6.TabIndex = 5;
             this.tabPage6.Text = "Жалобная книга";
             this.tabPage6.UseVisualStyleBackColor = true;
@@ -493,9 +507,9 @@ namespace Project
             // 
             this.button4.Location = new System.Drawing.Point(947, 416);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(230, 48);
+            this.button4.Size = new System.Drawing.Size(255, 48);
             this.button4.TabIndex = 4;
-            this.button4.Text = "Сохранить и отправить";
+            this.button4.Text = "Сохранить и отправить в базу данных";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
@@ -548,14 +562,24 @@ namespace Project
             this.button9.UseVisualStyleBackColor = true;
             this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
+            // label15
+            // 
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label15.Location = new System.Drawing.Point(6, 22);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(1259, 54);
+            this.label15.TabIndex = 16;
+            this.label15.Text = "Уважаемые сотрудники! Запись на приём осуществялется строго в будние дни с 7:00 д" +
+    "о 16:30.\r\n";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1282, 521);
+            this.ClientSize = new System.Drawing.Size(1270, 521);
             this.Controls.Add(this.tabControl1);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Городская клиническая поликлиника №21";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
@@ -582,7 +606,7 @@ namespace Project
         public System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttoncomplaintbook;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
         public System.Windows.Forms.TabPage tabPage2;
@@ -603,7 +627,7 @@ namespace Project
         private System.Windows.Forms.TabPage tabPage5;
         private System.Windows.Forms.TabPage tabPage6;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button buttonunload1;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox textBox2;
@@ -623,6 +647,7 @@ namespace Project
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Label label15;
     }
 }
 

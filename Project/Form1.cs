@@ -390,6 +390,15 @@ namespace Project
             {
                 w.WriteLine("ФИО: "+textBox1.Text + "\n"+ "Жалоба: "+ textBox2.Text);
             }
+
+            SqlConnection sqlConnection123 = new SqlConnection(@"Data Source=DESKTOP-AJR95T9\SQLEXPRESS; Initial Catalog=Hospital;Integrated Security=true ");
+            sqlConnection123.Open();
+            SqlCommand command123 = new SqlCommand($"INSERT INTO [Complaint book] (ФИО, Жалоба) VALUES (@ФИО, @Жалоба)", sqlConnection123);
+
+            command123.Parameters.AddWithValue("ФИО", textBox1.Text);
+            command123.Parameters.AddWithValue("Жалоба", textBox2.Text);
+           
+            MessageBox.Show("Успешно! Данные сохранены в базе данных и в файле", command123.ExecuteNonQuery().ToString());
         }
 
         private void button7_Click(object sender, EventArgs e)
@@ -463,6 +472,11 @@ namespace Project
             
             if (printDialog.ShowDialog() == DialogResult.OK)
                 printDialog.Document.Print(); 
+        }
+
+        private void buttoncomplaintbook_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectTab(tabPage6);
         }
     }
 }
