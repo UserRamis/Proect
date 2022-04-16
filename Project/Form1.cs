@@ -415,10 +415,35 @@ namespace Project
             // печать строки result
             e.Graphics.DrawString(result, new Font("Arial", 14), Brushes.Black, 0, 0);
         }
-    
-   
-    
-    
-    
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            SqlConnection sqlConnection12 = new SqlConnection(@"Data Source=DESKTOP-AJR95T9\SQLEXPRESS; Initial Catalog=Hospital;Integrated Security=true ");
+            sqlConnection12.Open();
+            SqlCommand command12 = new SqlCommand($"INSERT INTO [Record] (ФИО, Возраст, СНИЛС, Адрес, Симптомы) VALUES (@ФИО, @Возраст, @СНИЛС, @Адрес, @Симптомы)",sqlConnection12);
+
+            
+            
+            
+            command12.Parameters.AddWithValue("ФИО", textBox3.Text);
+            command12.Parameters.AddWithValue("Возраст", textBox4.Text);
+            command12.Parameters.AddWithValue("СНИЛС", textBox5.Text);
+            command12.Parameters.AddWithValue("Адрес", textBox6.Text);
+            command12.Parameters.AddWithValue("Симптомы", textBox7.Text);
+
+
+            MessageBox.Show("Успешно!",command12.ExecuteNonQuery().ToString());
+
+            textBox3.Clear();
+            textBox4.Clear();
+            textBox5.Clear();
+            textBox6.Clear();
+            textBox7.Clear();
+
+
+
+
+
+        }
     }
 }
