@@ -421,18 +421,19 @@ namespace Project
             SqlConnection sqlConnection12 = new SqlConnection(@"Data Source=DESKTOP-AJR95T9\SQLEXPRESS; Initial Catalog=Hospital;Integrated Security=true ");
             sqlConnection12.Open();
             SqlCommand command12 = new SqlCommand($"INSERT INTO [Record] (ФИО, Возраст, СНИЛС, Адрес, Симптомы) VALUES (@ФИО, @Возраст, @СНИЛС, @Адрес, @Симптомы)",sqlConnection12);
-
-            
-            
-            
+           
             command12.Parameters.AddWithValue("ФИО", textBox3.Text);
             command12.Parameters.AddWithValue("Возраст", textBox4.Text);
             command12.Parameters.AddWithValue("СНИЛС", textBox5.Text);
             command12.Parameters.AddWithValue("Адрес", textBox6.Text);
             command12.Parameters.AddWithValue("Симптомы", textBox7.Text);
 
+            MessageBox.Show("Успешно! Данные сохранены в базе данных и в файле",command12.ExecuteNonQuery().ToString());
 
-            MessageBox.Show("Успешно!",command12.ExecuteNonQuery().ToString());
+            using (StreamWriter w1 = File.AppendText(@"Записи на прием.txt"))
+            {
+                w1.WriteLine("ФИО: " + textBox3.Text + "\n" + "Возраст: " + textBox4.Text+"\nСНИЛС: "+ textBox5.Text + "\nАдрес: " + textBox6.Text + "\nСимптомы: " + textBox7.Text);
+            }
 
             textBox3.Clear();
             textBox4.Clear();
@@ -441,9 +442,27 @@ namespace Project
             textBox7.Clear();
 
 
+        }
 
+        private void button9_Click(object sender, EventArgs e)
+        {
+            
+            result = textBox3.Text;
+            result += textBox4.Text;
+            result += textBox5.Text;
+            result += textBox6.Text;
+            result += textBox7.Text;
 
-
+            PrintDocument printDocument = new PrintDocument();
+            
+            printDocument.PrintPage += PrintPageHandler;
+            
+            PrintDialog printDialog = new PrintDialog();
+            
+            printDialog.Document = printDocument;
+            
+            if (printDialog.ShowDialog() == DialogResult.OK)
+                printDialog.Document.Print(); 
         }
     }
 }

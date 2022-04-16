@@ -55,6 +55,17 @@ namespace Project
             this.button2 = new System.Windows.Forms.Button();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.button8 = new System.Windows.Forms.Button();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.button7 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
@@ -63,17 +74,7 @@ namespace Project
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.button8 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -346,6 +347,7 @@ namespace Project
             // 
             // tabPage5
             // 
+            this.tabPage5.Controls.Add(this.button9);
             this.tabPage5.Controls.Add(this.button8);
             this.tabPage5.Controls.Add(this.textBox7);
             this.tabPage5.Controls.Add(this.textBox6);
@@ -364,6 +366,102 @@ namespace Project
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Запись на приём";
             this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // button8
+            // 
+            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button8.Location = new System.Drawing.Point(972, 400);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(264, 77);
+            this.button8.TabIndex = 14;
+            this.button8.Text = "Сохранить в базу данных и файл";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
+            // textBox7
+            // 
+            this.textBox7.Location = new System.Drawing.Point(234, 271);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(613, 22);
+            this.textBox7.TabIndex = 11;
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(234, 218);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(613, 22);
+            this.textBox6.TabIndex = 10;
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(234, 170);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(613, 22);
+            this.textBox5.TabIndex = 9;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(234, 121);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(613, 22);
+            this.textBox4.TabIndex = 8;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(234, 70);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(613, 22);
+            this.textBox3.TabIndex = 7;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label14.Location = new System.Drawing.Point(85, 271);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(118, 25);
+            this.label14.TabIndex = 4;
+            this.label14.Text = "Симптомы";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label13.Location = new System.Drawing.Point(85, 215);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(69, 25);
+            this.label13.TabIndex = 3;
+            this.label13.Text = "Адрес";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label12.Location = new System.Drawing.Point(85, 170);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(80, 25);
+            this.label12.TabIndex = 2;
+            this.label12.Text = "СНИЛС";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label11.Location = new System.Drawing.Point(85, 118);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(89, 25);
+            this.label11.TabIndex = 1;
+            this.label11.Text = "Возраст";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label10.Location = new System.Drawing.Point(85, 66);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(60, 25);
+            this.label10.TabIndex = 0;
+            this.label10.Text = "ФИО";
             // 
             // tabPage6
             // 
@@ -439,101 +537,16 @@ namespace Project
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // label10
+            // button9
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label10.Location = new System.Drawing.Point(85, 66);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(60, 25);
-            this.label10.TabIndex = 0;
-            this.label10.Text = "ФИО";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label11.Location = new System.Drawing.Point(85, 118);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(89, 25);
-            this.label11.TabIndex = 1;
-            this.label11.Text = "Возраст";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label12.Location = new System.Drawing.Point(85, 170);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(80, 25);
-            this.label12.TabIndex = 2;
-            this.label12.Text = "СНИЛС";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label13.Location = new System.Drawing.Point(85, 215);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(69, 25);
-            this.label13.TabIndex = 3;
-            this.label13.Text = "Адрес";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label14.Location = new System.Drawing.Point(85, 271);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(118, 25);
-            this.label14.TabIndex = 4;
-            this.label14.Text = "Симптомы";
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(234, 70);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(613, 22);
-            this.textBox3.TabIndex = 7;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(234, 121);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(613, 22);
-            this.textBox4.TabIndex = 8;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(234, 170);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(613, 22);
-            this.textBox5.TabIndex = 9;
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(234, 218);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(613, 22);
-            this.textBox6.TabIndex = 10;
-            // 
-            // textBox7
-            // 
-            this.textBox7.Location = new System.Drawing.Point(234, 271);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(613, 22);
-            this.textBox7.TabIndex = 11;
-            // 
-            // button8
-            // 
-            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button8.Location = new System.Drawing.Point(972, 400);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(264, 77);
-            this.button8.TabIndex = 14;
-            this.button8.Text = "Сохранить в базу данных и файл";
-            this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
+            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button9.Location = new System.Drawing.Point(692, 400);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(185, 77);
+            this.button9.TabIndex = 15;
+            this.button9.Text = "Печать направления";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // Form1
             // 
@@ -609,6 +622,7 @@ namespace Project
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Button button9;
     }
 }
 
