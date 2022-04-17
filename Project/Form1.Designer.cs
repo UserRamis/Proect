@@ -1,7 +1,7 @@
 ﻿
 namespace Project
 {
-    partial class Form1
+    partial class MainForm
     {
         /// <summary>
         /// Обязательная переменная конструктора.
@@ -30,75 +30,75 @@ namespace Project
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.tabPage1Main = new System.Windows.Forms.TabPage();
+            this.label6Time = new System.Windows.Forms.Label();
+            this.label5Date = new System.Windows.Forms.Label();
+            this.label4Time = new System.Windows.Forms.Label();
+            this.label3Date = new System.Windows.Forms.Label();
+            this.label2Telephone = new System.Windows.Forms.Label();
+            this.label1Hospital = new System.Windows.Forms.Label();
             this.buttoncomplaintbook = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.button6 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button5 = new System.Windows.Forms.Button();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.button3 = new System.Windows.Forms.Button();
+            this.pictureBoxHosp = new System.Windows.Forms.PictureBox();
+            this.pictureBox1Hospital = new System.Windows.Forms.PictureBox();
+            this.tabPage2Employee = new System.Windows.Forms.TabPage();
+            this.button6updateEmployee = new System.Windows.Forms.Button();
+            this.dataGridViewEmployee = new System.Windows.Forms.DataGridView();
+            this.buttonEmployee = new System.Windows.Forms.Button();
+            this.tabPage3WorkLoad = new System.Windows.Forms.TabPage();
+            this.pictureBox4Timetable = new System.Windows.Forms.PictureBox();
+            this.pictureBox3Diagrams = new System.Windows.Forms.PictureBox();
+            this.label7announcement = new System.Windows.Forms.Label();
+            this.tabPage4Patients = new System.Windows.Forms.TabPage();
+            this.button3unloadpatients = new System.Windows.Forms.Button();
             this.buttonunload1 = new System.Windows.Forms.Button();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.label15 = new System.Windows.Forms.Label();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.tabPage6 = new System.Windows.Forms.TabPage();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.label9 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.dataGridViewPatients = new System.Windows.Forms.DataGridView();
+            this.tabPage5Record = new System.Windows.Forms.TabPage();
+            this.label15announcementreception = new System.Windows.Forms.Label();
+            this.button9Printreception = new System.Windows.Forms.Button();
+            this.button8savereception = new System.Windows.Forms.Button();
+            this.textBox7symptoms = new System.Windows.Forms.TextBox();
+            this.textBox6addres = new System.Windows.Forms.TextBox();
+            this.textBox5snils = new System.Windows.Forms.TextBox();
+            this.textBox4age = new System.Windows.Forms.TextBox();
+            this.textBox3FIO = new System.Windows.Forms.TextBox();
+            this.label14symptoms = new System.Windows.Forms.Label();
+            this.label13addres = new System.Windows.Forms.Label();
+            this.label12SNILS = new System.Windows.Forms.Label();
+            this.label11Age = new System.Windows.Forms.Label();
+            this.label10FIO = new System.Windows.Forms.Label();
+            this.tabPage6complaintbook = new System.Windows.Forms.TabPage();
+            this.button7printwritecomplaint = new System.Windows.Forms.Button();
+            this.button4savewritecomplaint = new System.Windows.Forms.Button();
+            this.label9writecomplaint = new System.Windows.Forms.Label();
+            this.textBox2writecomplaint = new System.Windows.Forms.TextBox();
+            this.textBox1bookFIO = new System.Windows.Forms.TextBox();
+            this.label8bookFIO = new System.Windows.Forms.Label();
+            this.timer1Date = new System.Windows.Forms.Timer(this.components);
             this.tabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.tabPage3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            this.tabPage4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            this.tabPage5.SuspendLayout();
-            this.tabPage6.SuspendLayout();
+            this.tabPage1Main.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxHosp)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1Hospital)).BeginInit();
+            this.tabPage2Employee.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEmployee)).BeginInit();
+            this.tabPage3WorkLoad.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4Timetable)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3Diagrams)).BeginInit();
+            this.tabPage4Patients.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPatients)).BeginInit();
+            this.tabPage5Record.SuspendLayout();
+            this.tabPage6complaintbook.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Controls.Add(this.tabPage4);
-            this.tabControl1.Controls.Add(this.tabPage5);
-            this.tabControl1.Controls.Add(this.tabPage6);
+            this.tabControl1.Controls.Add(this.tabPage1Main);
+            this.tabControl1.Controls.Add(this.tabPage2Employee);
+            this.tabControl1.Controls.Add(this.tabPage3WorkLoad);
+            this.tabControl1.Controls.Add(this.tabPage4Patients);
+            this.tabControl1.Controls.Add(this.tabPage5Record);
+            this.tabControl1.Controls.Add(this.tabPage6complaintbook);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.ItemSize = new System.Drawing.Size(130, 25);
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
@@ -107,86 +107,87 @@ namespace Project
             this.tabControl1.Size = new System.Drawing.Size(1270, 521);
             this.tabControl1.TabIndex = 0;
             // 
-            // tabPage1
+            // tabPage1Main
             // 
-            this.tabPage1.BackColor = System.Drawing.Color.SlateGray;
-            this.tabPage1.Controls.Add(this.label6);
-            this.tabPage1.Controls.Add(this.label5);
-            this.tabPage1.Controls.Add(this.label4);
-            this.tabPage1.Controls.Add(this.label3);
-            this.tabPage1.Controls.Add(this.label2);
-            this.tabPage1.Controls.Add(this.label1);
-            this.tabPage1.Controls.Add(this.buttoncomplaintbook);
-            this.tabPage1.Controls.Add(this.pictureBox2);
-            this.tabPage1.Controls.Add(this.pictureBox1);
-            this.tabPage1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tabPage1.Location = new System.Drawing.Point(4, 29);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1262, 488);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Главная страница";
+            this.tabPage1Main.BackColor = System.Drawing.Color.SlateGray;
+            this.tabPage1Main.Controls.Add(this.label6Time);
+            this.tabPage1Main.Controls.Add(this.label5Date);
+            this.tabPage1Main.Controls.Add(this.label4Time);
+            this.tabPage1Main.Controls.Add(this.label3Date);
+            this.tabPage1Main.Controls.Add(this.label2Telephone);
+            this.tabPage1Main.Controls.Add(this.label1Hospital);
+            this.tabPage1Main.Controls.Add(this.buttoncomplaintbook);
+            this.tabPage1Main.Controls.Add(this.pictureBoxHosp);
+            this.tabPage1Main.Controls.Add(this.pictureBox1Hospital);
+            this.tabPage1Main.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tabPage1Main.Location = new System.Drawing.Point(4, 29);
+            this.tabPage1Main.Name = "tabPage1Main";
+            this.tabPage1Main.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1Main.Size = new System.Drawing.Size(1262, 488);
+            this.tabPage1Main.TabIndex = 0;
+            this.tabPage1Main.Text = "Главная страница";
             // 
-            // label6
+            // label6Time
             // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label6.Location = new System.Drawing.Point(69, 452);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(142, 20);
-            this.label6.TabIndex = 8;
-            this.label6.Text = "Текущее время:";
+            this.label6Time.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label6Time.AutoSize = true;
+            this.label6Time.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label6Time.Location = new System.Drawing.Point(69, 452);
+            this.label6Time.Name = "label6Time";
+            this.label6Time.Size = new System.Drawing.Size(142, 20);
+            this.label6Time.TabIndex = 8;
+            this.label6Time.Text = "Текущее время:";
             // 
-            // label5
+            // label5Date
             // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.Location = new System.Drawing.Point(69, 415);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(132, 20);
-            this.label5.TabIndex = 7;
-            this.label5.Text = "Текущая дата:";
+            this.label5Date.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label5Date.AutoSize = true;
+            this.label5Date.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label5Date.Location = new System.Drawing.Point(69, 415);
+            this.label5Date.Name = "label5Date";
+            this.label5Date.Size = new System.Drawing.Size(132, 20);
+            this.label5Date.TabIndex = 7;
+            this.label5Date.Text = "Текущая дата:";
             // 
-            // label4
+            // label4Time
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.Location = new System.Drawing.Point(246, 449);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(0, 20);
-            this.label4.TabIndex = 6;
+            this.label4Time.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label4Time.AutoSize = true;
+            this.label4Time.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label4Time.Location = new System.Drawing.Point(246, 449);
+            this.label4Time.Name = "label4Time";
+            this.label4Time.Size = new System.Drawing.Size(0, 20);
+            this.label4Time.TabIndex = 6;
             // 
-            // label3
+            // label3Date
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(246, 417);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(0, 20);
-            this.label3.TabIndex = 5;
+            this.label3Date.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label3Date.AutoSize = true;
+            this.label3Date.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3Date.Location = new System.Drawing.Point(246, 417);
+            this.label3Date.Name = "label3Date";
+            this.label3Date.Size = new System.Drawing.Size(0, 20);
+            this.label3Date.TabIndex = 5;
             // 
-            // label2
+            // label2Telephone
             // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(506, 441);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(515, 25);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Горячая линия тех. поддержки: 8-800-555-35-35.";
+            this.label2Telephone.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.label2Telephone.AutoSize = true;
+            this.label2Telephone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2Telephone.Location = new System.Drawing.Point(506, 441);
+            this.label2Telephone.Name = "label2Telephone";
+            this.label2Telephone.Size = new System.Drawing.Size(515, 25);
+            this.label2Telephone.TabIndex = 4;
+            this.label2Telephone.Text = "Горячая линия тех. поддержки: 8-800-555-35-35.";
             // 
-            // label1
+            // label1Hospital
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(6, 6);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(341, 124);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "ГАУЗ городская поликлиника № 21\r\nстуденческая поликлиника\r\nрежим работы:\r\nс 8.30 " +
+            this.label1Hospital.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1Hospital.Location = new System.Drawing.Point(6, 6);
+            this.label1Hospital.Name = "label1Hospital";
+            this.label1Hospital.Size = new System.Drawing.Size(341, 124);
+            this.label1Hospital.TabIndex = 3;
+            this.label1Hospital.Text = "ГАУЗ городская поликлиника № 21\r\nстуденческая поликлиника\r\nрежим работы:\r\nс 8.30 " +
     "до 19:30.\r\n\r\n";
             // 
             // buttoncomplaintbook
@@ -202,145 +203,154 @@ namespace Project
             this.buttoncomplaintbook.UseVisualStyleBackColor = false;
             this.buttoncomplaintbook.Click += new System.EventHandler(this.buttoncomplaintbook_Click);
             // 
-            // pictureBox2
+            // pictureBoxHosp
             // 
-            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(59, 133);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(226, 176);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
+            this.pictureBoxHosp.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.pictureBoxHosp.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxHosp.Image")));
+            this.pictureBoxHosp.Location = new System.Drawing.Point(59, 133);
+            this.pictureBoxHosp.Name = "pictureBoxHosp";
+            this.pictureBoxHosp.Size = new System.Drawing.Size(226, 176);
+            this.pictureBoxHosp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxHosp.TabIndex = 1;
+            this.pictureBoxHosp.TabStop = false;
             // 
-            // pictureBox1
+            // pictureBox1Hospital
             // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(348, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(914, 413);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.BackColor = System.Drawing.Color.SlateGray;
-            this.tabPage2.Controls.Add(this.button6);
-            this.tabPage2.Controls.Add(this.dataGridView1);
-            this.tabPage2.Controls.Add(this.button5);
-            this.tabPage2.Location = new System.Drawing.Point(4, 29);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1262, 488);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = " Сотрудники";
-            // 
-            // button6
-            // 
-            this.button6.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.button6.Location = new System.Drawing.Point(426, 425);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(155, 47);
-            this.button6.TabIndex = 6;
-            this.button6.Text = "Обновить список";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.pictureBox1Hospital.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(23, 4);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1236, 420);
-            this.dataGridView1.TabIndex = 5;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            this.dataGridView1.UserAddedRow += new System.Windows.Forms.DataGridViewRowEventHandler(this.dataGridView1_UserAddedRow);
+            this.pictureBox1Hospital.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1Hospital.Image")));
+            this.pictureBox1Hospital.Location = new System.Drawing.Point(348, 0);
+            this.pictureBox1Hospital.Name = "pictureBox1Hospital";
+            this.pictureBox1Hospital.Size = new System.Drawing.Size(914, 413);
+            this.pictureBox1Hospital.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1Hospital.TabIndex = 0;
+            this.pictureBox1Hospital.TabStop = false;
             // 
-            // button5
+            // tabPage2Employee
             // 
-            this.button5.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.button5.Location = new System.Drawing.Point(141, 425);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(161, 47);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "Выгрузить список";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.tabPage2Employee.BackColor = System.Drawing.Color.SlateGray;
+            this.tabPage2Employee.Controls.Add(this.button6updateEmployee);
+            this.tabPage2Employee.Controls.Add(this.dataGridViewEmployee);
+            this.tabPage2Employee.Controls.Add(this.buttonEmployee);
+            this.tabPage2Employee.Location = new System.Drawing.Point(4, 29);
+            this.tabPage2Employee.Name = "tabPage2Employee";
+            this.tabPage2Employee.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2Employee.Size = new System.Drawing.Size(1262, 488);
+            this.tabPage2Employee.TabIndex = 1;
+            this.tabPage2Employee.Text = " Сотрудники";
             // 
-            // tabPage3
+            // button6updateEmployee
             // 
-            this.tabPage3.BackColor = System.Drawing.Color.SlateGray;
-            this.tabPage3.Controls.Add(this.pictureBox4);
-            this.tabPage3.Controls.Add(this.pictureBox3);
-            this.tabPage3.Controls.Add(this.label7);
-            this.tabPage3.Location = new System.Drawing.Point(4, 29);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1262, 488);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Загруженность врачей";
+            this.button6updateEmployee.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.button6updateEmployee.AutoSize = true;
+            this.button6updateEmployee.Location = new System.Drawing.Point(426, 425);
+            this.button6updateEmployee.Name = "button6updateEmployee";
+            this.button6updateEmployee.Size = new System.Drawing.Size(155, 47);
+            this.button6updateEmployee.TabIndex = 6;
+            this.button6updateEmployee.Text = "Обновить список";
+            this.button6updateEmployee.UseVisualStyleBackColor = true;
+            this.button6updateEmployee.Click += new System.EventHandler(this.button6_Click);
             // 
-            // pictureBox4
+            // dataGridViewEmployee
             // 
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(20, 78);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(601, 386);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 2;
-            this.pictureBox4.TabStop = false;
+            this.dataGridViewEmployee.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridViewEmployee.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewEmployee.Location = new System.Drawing.Point(0, 4);
+            this.dataGridViewEmployee.Name = "dataGridViewEmployee";
+            this.dataGridViewEmployee.RowHeadersWidth = 51;
+            this.dataGridViewEmployee.RowTemplate.Height = 24;
+            this.dataGridViewEmployee.Size = new System.Drawing.Size(1259, 420);
+            this.dataGridViewEmployee.TabIndex = 5;
+            this.dataGridViewEmployee.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridViewEmployee.UserAddedRow += new System.Windows.Forms.DataGridViewRowEventHandler(this.dataGridView1_UserAddedRow);
             // 
-            // pictureBox3
+            // buttonEmployee
             // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(627, 78);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(632, 386);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox3.TabIndex = 1;
-            this.pictureBox3.TabStop = false;
+            this.buttonEmployee.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.buttonEmployee.AutoSize = true;
+            this.buttonEmployee.Location = new System.Drawing.Point(141, 425);
+            this.buttonEmployee.Name = "buttonEmployee";
+            this.buttonEmployee.Size = new System.Drawing.Size(161, 47);
+            this.buttonEmployee.TabIndex = 4;
+            this.buttonEmployee.Text = "Выгрузить список";
+            this.buttonEmployee.UseVisualStyleBackColor = true;
+            this.buttonEmployee.Click += new System.EventHandler(this.button5_Click);
             // 
-            // label7
+            // tabPage3WorkLoad
             // 
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label7.Location = new System.Drawing.Point(172, 3);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(819, 72);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "Уважаемые сотрудники! График и расписание обновляется каждую cубботу в 04:00.Прос" +
+            this.tabPage3WorkLoad.BackColor = System.Drawing.Color.SlateGray;
+            this.tabPage3WorkLoad.Controls.Add(this.pictureBox4Timetable);
+            this.tabPage3WorkLoad.Controls.Add(this.pictureBox3Diagrams);
+            this.tabPage3WorkLoad.Controls.Add(this.label7announcement);
+            this.tabPage3WorkLoad.Location = new System.Drawing.Point(4, 29);
+            this.tabPage3WorkLoad.Name = "tabPage3WorkLoad";
+            this.tabPage3WorkLoad.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3WorkLoad.Size = new System.Drawing.Size(1262, 488);
+            this.tabPage3WorkLoad.TabIndex = 2;
+            this.tabPage3WorkLoad.Text = "Загруженность врачей";
+            // 
+            // pictureBox4Timetable
+            // 
+            this.pictureBox4Timetable.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox4Timetable.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4Timetable.Image")));
+            this.pictureBox4Timetable.Location = new System.Drawing.Point(20, 78);
+            this.pictureBox4Timetable.Name = "pictureBox4Timetable";
+            this.pictureBox4Timetable.Size = new System.Drawing.Size(601, 386);
+            this.pictureBox4Timetable.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4Timetable.TabIndex = 2;
+            this.pictureBox4Timetable.TabStop = false;
+            // 
+            // pictureBox3Diagrams
+            // 
+            this.pictureBox3Diagrams.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox3Diagrams.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3Diagrams.Image")));
+            this.pictureBox3Diagrams.Location = new System.Drawing.Point(627, 78);
+            this.pictureBox3Diagrams.Name = "pictureBox3Diagrams";
+            this.pictureBox3Diagrams.Size = new System.Drawing.Size(632, 386);
+            this.pictureBox3Diagrams.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox3Diagrams.TabIndex = 1;
+            this.pictureBox3Diagrams.TabStop = false;
+            // 
+            // label7announcement
+            // 
+            this.label7announcement.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label7announcement.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label7announcement.Location = new System.Drawing.Point(172, 3);
+            this.label7announcement.Name = "label7announcement";
+            this.label7announcement.Size = new System.Drawing.Size(819, 72);
+            this.label7announcement.TabIndex = 0;
+            this.label7announcement.Text = "Уважаемые сотрудники! График и расписание обновляется каждую cубботу в 04:00.Прос" +
     "им отнестись с пониманием.";
             // 
-            // tabPage4
+            // tabPage4Patients
             // 
-            this.tabPage4.BackColor = System.Drawing.Color.SlateGray;
-            this.tabPage4.Controls.Add(this.button3);
-            this.tabPage4.Controls.Add(this.buttonunload1);
-            this.tabPage4.Controls.Add(this.dataGridView2);
-            this.tabPage4.Location = new System.Drawing.Point(4, 29);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(1262, 488);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "Пациенты";
+            this.tabPage4Patients.BackColor = System.Drawing.Color.SlateGray;
+            this.tabPage4Patients.Controls.Add(this.button3unloadpatients);
+            this.tabPage4Patients.Controls.Add(this.buttonunload1);
+            this.tabPage4Patients.Controls.Add(this.dataGridViewPatients);
+            this.tabPage4Patients.Location = new System.Drawing.Point(4, 29);
+            this.tabPage4Patients.Name = "tabPage4Patients";
+            this.tabPage4Patients.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4Patients.Size = new System.Drawing.Size(1262, 488);
+            this.tabPage4Patients.TabIndex = 3;
+            this.tabPage4Patients.Text = "Пациенты";
             // 
-            // button3
+            // button3unloadpatients
             // 
-            this.button3.Location = new System.Drawing.Point(570, 421);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(132, 38);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Обновить список";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.button3unloadpatients.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.button3unloadpatients.Location = new System.Drawing.Point(570, 421);
+            this.button3unloadpatients.Name = "button3unloadpatients";
+            this.button3unloadpatients.Size = new System.Drawing.Size(132, 38);
+            this.button3unloadpatients.TabIndex = 2;
+            this.button3unloadpatients.Text = "Обновить список";
+            this.button3unloadpatients.UseVisualStyleBackColor = true;
+            this.button3unloadpatients.Click += new System.EventHandler(this.button3_Click);
             // 
             // buttonunload1
             // 
+            this.buttonunload1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.buttonunload1.Location = new System.Drawing.Point(106, 418);
             this.buttonunload1.Name = "buttonunload1";
             this.buttonunload1.Size = new System.Drawing.Size(146, 45);
@@ -349,233 +359,254 @@ namespace Project
             this.buttonunload1.UseVisualStyleBackColor = true;
             this.buttonunload1.Click += new System.EventHandler(this.button2_Click_1);
             // 
-            // dataGridView2
+            // dataGridViewPatients
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(6, 3);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(1253, 391);
-            this.dataGridView2.TabIndex = 0;
-            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
-            this.dataGridView2.UserAddedRow += new System.Windows.Forms.DataGridViewRowEventHandler(this.dataGridView2_UserAddedRow);
+            this.dataGridViewPatients.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridViewPatients.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewPatients.Location = new System.Drawing.Point(6, 3);
+            this.dataGridViewPatients.Name = "dataGridViewPatients";
+            this.dataGridViewPatients.RowHeadersWidth = 51;
+            this.dataGridViewPatients.RowTemplate.Height = 24;
+            this.dataGridViewPatients.Size = new System.Drawing.Size(1253, 391);
+            this.dataGridViewPatients.TabIndex = 0;
+            this.dataGridViewPatients.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
+            this.dataGridViewPatients.UserAddedRow += new System.Windows.Forms.DataGridViewRowEventHandler(this.dataGridView2_UserAddedRow);
             // 
-            // tabPage5
+            // tabPage5Record
             // 
-            this.tabPage5.BackColor = System.Drawing.Color.SlateGray;
-            this.tabPage5.Controls.Add(this.label15);
-            this.tabPage5.Controls.Add(this.button9);
-            this.tabPage5.Controls.Add(this.button8);
-            this.tabPage5.Controls.Add(this.textBox7);
-            this.tabPage5.Controls.Add(this.textBox6);
-            this.tabPage5.Controls.Add(this.textBox5);
-            this.tabPage5.Controls.Add(this.textBox4);
-            this.tabPage5.Controls.Add(this.textBox3);
-            this.tabPage5.Controls.Add(this.label14);
-            this.tabPage5.Controls.Add(this.label13);
-            this.tabPage5.Controls.Add(this.label12);
-            this.tabPage5.Controls.Add(this.label11);
-            this.tabPage5.Controls.Add(this.label10);
-            this.tabPage5.Location = new System.Drawing.Point(4, 29);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(1262, 488);
-            this.tabPage5.TabIndex = 4;
-            this.tabPage5.Text = "Запись на приём";
+            this.tabPage5Record.BackColor = System.Drawing.Color.SlateGray;
+            this.tabPage5Record.Controls.Add(this.label15announcementreception);
+            this.tabPage5Record.Controls.Add(this.button9Printreception);
+            this.tabPage5Record.Controls.Add(this.button8savereception);
+            this.tabPage5Record.Controls.Add(this.textBox7symptoms);
+            this.tabPage5Record.Controls.Add(this.textBox6addres);
+            this.tabPage5Record.Controls.Add(this.textBox5snils);
+            this.tabPage5Record.Controls.Add(this.textBox4age);
+            this.tabPage5Record.Controls.Add(this.textBox3FIO);
+            this.tabPage5Record.Controls.Add(this.label14symptoms);
+            this.tabPage5Record.Controls.Add(this.label13addres);
+            this.tabPage5Record.Controls.Add(this.label12SNILS);
+            this.tabPage5Record.Controls.Add(this.label11Age);
+            this.tabPage5Record.Controls.Add(this.label10FIO);
+            this.tabPage5Record.Location = new System.Drawing.Point(4, 29);
+            this.tabPage5Record.Name = "tabPage5Record";
+            this.tabPage5Record.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage5Record.Size = new System.Drawing.Size(1262, 488);
+            this.tabPage5Record.TabIndex = 4;
+            this.tabPage5Record.Text = "Запись на приём";
             // 
-            // label15
+            // label15announcementreception
             // 
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label15.Location = new System.Drawing.Point(6, 22);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(1259, 54);
-            this.label15.TabIndex = 16;
-            this.label15.Text = "Уважаемые сотрудники! Запись на приём осуществялется строго в будние дни с 7:00 д" +
+            this.label15announcementreception.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label15announcementreception.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label15announcementreception.Location = new System.Drawing.Point(6, 22);
+            this.label15announcementreception.Name = "label15announcementreception";
+            this.label15announcementreception.Size = new System.Drawing.Size(1259, 54);
+            this.label15announcementreception.TabIndex = 16;
+            this.label15announcementreception.Text = "Уважаемые сотрудники! Запись на приём осуществялется строго в будние дни с 7:00 д" +
     "о 16:30.\r\n";
             // 
-            // button9
+            // button9Printreception
             // 
-            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button9.Location = new System.Drawing.Point(692, 400);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(185, 77);
-            this.button9.TabIndex = 15;
-            this.button9.Text = "Печать направления";
-            this.button9.UseVisualStyleBackColor = true;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
+            this.button9Printreception.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.button9Printreception.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button9Printreception.Location = new System.Drawing.Point(692, 400);
+            this.button9Printreception.Name = "button9Printreception";
+            this.button9Printreception.Size = new System.Drawing.Size(185, 77);
+            this.button9Printreception.TabIndex = 15;
+            this.button9Printreception.Text = "Печать направления";
+            this.button9Printreception.UseVisualStyleBackColor = true;
+            this.button9Printreception.Click += new System.EventHandler(this.button9_Click);
             // 
-            // button8
+            // button8savereception
             // 
-            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button8.Location = new System.Drawing.Point(972, 400);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(264, 77);
-            this.button8.TabIndex = 14;
-            this.button8.Text = "Сохранить в базу данных и в файл";
-            this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
+            this.button8savereception.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.button8savereception.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button8savereception.Location = new System.Drawing.Point(972, 400);
+            this.button8savereception.Name = "button8savereception";
+            this.button8savereception.Size = new System.Drawing.Size(264, 77);
+            this.button8savereception.TabIndex = 14;
+            this.button8savereception.Text = "Сохранить в базу данных и в файл";
+            this.button8savereception.UseVisualStyleBackColor = true;
+            this.button8savereception.Click += new System.EventHandler(this.button8_Click);
             // 
-            // textBox7
+            // textBox7symptoms
             // 
-            this.textBox7.Location = new System.Drawing.Point(234, 327);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(613, 22);
-            this.textBox7.TabIndex = 11;
+            this.textBox7symptoms.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBox7symptoms.Location = new System.Drawing.Point(234, 327);
+            this.textBox7symptoms.Name = "textBox7symptoms";
+            this.textBox7symptoms.Size = new System.Drawing.Size(613, 22);
+            this.textBox7symptoms.TabIndex = 11;
             // 
-            // textBox6
+            // textBox6addres
             // 
-            this.textBox6.Location = new System.Drawing.Point(234, 270);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(613, 22);
-            this.textBox6.TabIndex = 10;
+            this.textBox6addres.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBox6addres.Location = new System.Drawing.Point(234, 270);
+            this.textBox6addres.Name = "textBox6addres";
+            this.textBox6addres.Size = new System.Drawing.Size(613, 22);
+            this.textBox6addres.TabIndex = 10;
             // 
-            // textBox5
+            // textBox5snils
             // 
-            this.textBox5.Location = new System.Drawing.Point(234, 218);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(613, 22);
-            this.textBox5.TabIndex = 9;
+            this.textBox5snils.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBox5snils.Location = new System.Drawing.Point(234, 218);
+            this.textBox5snils.Name = "textBox5snils";
+            this.textBox5snils.Size = new System.Drawing.Size(613, 22);
+            this.textBox5snils.TabIndex = 9;
             // 
-            // textBox4
+            // textBox4age
             // 
-            this.textBox4.Location = new System.Drawing.Point(234, 169);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(613, 22);
-            this.textBox4.TabIndex = 8;
+            this.textBox4age.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBox4age.Location = new System.Drawing.Point(234, 169);
+            this.textBox4age.Name = "textBox4age";
+            this.textBox4age.Size = new System.Drawing.Size(613, 22);
+            this.textBox4age.TabIndex = 8;
             // 
-            // textBox3
+            // textBox3FIO
             // 
-            this.textBox3.Location = new System.Drawing.Point(234, 122);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(613, 22);
-            this.textBox3.TabIndex = 7;
+            this.textBox3FIO.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBox3FIO.Location = new System.Drawing.Point(234, 122);
+            this.textBox3FIO.Name = "textBox3FIO";
+            this.textBox3FIO.Size = new System.Drawing.Size(613, 22);
+            this.textBox3FIO.TabIndex = 7;
             // 
-            // label14
+            // label14symptoms
             // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label14.Location = new System.Drawing.Point(85, 323);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(118, 25);
-            this.label14.TabIndex = 4;
-            this.label14.Text = "Симптомы";
+            this.label14symptoms.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label14symptoms.AutoSize = true;
+            this.label14symptoms.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label14symptoms.Location = new System.Drawing.Point(85, 323);
+            this.label14symptoms.Name = "label14symptoms";
+            this.label14symptoms.Size = new System.Drawing.Size(118, 25);
+            this.label14symptoms.TabIndex = 4;
+            this.label14symptoms.Text = "Симптомы";
             // 
-            // label13
+            // label13addres
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label13.Location = new System.Drawing.Point(85, 266);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(69, 25);
-            this.label13.TabIndex = 3;
-            this.label13.Text = "Адрес";
+            this.label13addres.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label13addres.AutoSize = true;
+            this.label13addres.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label13addres.Location = new System.Drawing.Point(85, 266);
+            this.label13addres.Name = "label13addres";
+            this.label13addres.Size = new System.Drawing.Size(69, 25);
+            this.label13addres.TabIndex = 3;
+            this.label13addres.Text = "Адрес";
             // 
-            // label12
+            // label12SNILS
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label12.Location = new System.Drawing.Point(85, 218);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(80, 25);
-            this.label12.TabIndex = 2;
-            this.label12.Text = "СНИЛС";
+            this.label12SNILS.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label12SNILS.AutoSize = true;
+            this.label12SNILS.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label12SNILS.Location = new System.Drawing.Point(85, 218);
+            this.label12SNILS.Name = "label12SNILS";
+            this.label12SNILS.Size = new System.Drawing.Size(80, 25);
+            this.label12SNILS.TabIndex = 2;
+            this.label12SNILS.Text = "СНИЛС";
             // 
-            // label11
+            // label11Age
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label11.Location = new System.Drawing.Point(85, 169);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(89, 25);
-            this.label11.TabIndex = 1;
-            this.label11.Text = "Возраст";
+            this.label11Age.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label11Age.AutoSize = true;
+            this.label11Age.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label11Age.Location = new System.Drawing.Point(85, 169);
+            this.label11Age.Name = "label11Age";
+            this.label11Age.Size = new System.Drawing.Size(89, 25);
+            this.label11Age.TabIndex = 1;
+            this.label11Age.Text = "Возраст";
             // 
-            // label10
+            // label10FIO
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label10.Location = new System.Drawing.Point(85, 122);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(60, 25);
-            this.label10.TabIndex = 0;
-            this.label10.Text = "ФИО";
+            this.label10FIO.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label10FIO.AutoSize = true;
+            this.label10FIO.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label10FIO.Location = new System.Drawing.Point(85, 122);
+            this.label10FIO.Name = "label10FIO";
+            this.label10FIO.Size = new System.Drawing.Size(60, 25);
+            this.label10FIO.TabIndex = 0;
+            this.label10FIO.Text = "ФИО";
             // 
-            // tabPage6
+            // tabPage6complaintbook
             // 
-            this.tabPage6.BackColor = System.Drawing.Color.SlateGray;
-            this.tabPage6.Controls.Add(this.button7);
-            this.tabPage6.Controls.Add(this.button4);
-            this.tabPage6.Controls.Add(this.label9);
-            this.tabPage6.Controls.Add(this.textBox2);
-            this.tabPage6.Controls.Add(this.textBox1);
-            this.tabPage6.Controls.Add(this.label8);
-            this.tabPage6.Location = new System.Drawing.Point(4, 29);
-            this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(1262, 488);
-            this.tabPage6.TabIndex = 5;
-            this.tabPage6.Text = "Жалобная книга";
+            this.tabPage6complaintbook.BackColor = System.Drawing.Color.SlateGray;
+            this.tabPage6complaintbook.Controls.Add(this.button7printwritecomplaint);
+            this.tabPage6complaintbook.Controls.Add(this.button4savewritecomplaint);
+            this.tabPage6complaintbook.Controls.Add(this.label9writecomplaint);
+            this.tabPage6complaintbook.Controls.Add(this.textBox2writecomplaint);
+            this.tabPage6complaintbook.Controls.Add(this.textBox1bookFIO);
+            this.tabPage6complaintbook.Controls.Add(this.label8bookFIO);
+            this.tabPage6complaintbook.Location = new System.Drawing.Point(4, 29);
+            this.tabPage6complaintbook.Name = "tabPage6complaintbook";
+            this.tabPage6complaintbook.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage6complaintbook.Size = new System.Drawing.Size(1262, 488);
+            this.tabPage6complaintbook.TabIndex = 5;
+            this.tabPage6complaintbook.Text = "Жалобная книга";
             // 
-            // button7
+            // button7printwritecomplaint
             // 
-            this.button7.Location = new System.Drawing.Point(602, 416);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(162, 47);
-            this.button7.TabIndex = 5;
-            this.button7.Text = "Распечатать";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
+            this.button7printwritecomplaint.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.button7printwritecomplaint.Location = new System.Drawing.Point(602, 416);
+            this.button7printwritecomplaint.Name = "button7printwritecomplaint";
+            this.button7printwritecomplaint.Size = new System.Drawing.Size(162, 47);
+            this.button7printwritecomplaint.TabIndex = 5;
+            this.button7printwritecomplaint.Text = "Распечатать";
+            this.button7printwritecomplaint.UseVisualStyleBackColor = true;
+            this.button7printwritecomplaint.Click += new System.EventHandler(this.button7_Click);
             // 
-            // button4
+            // button4savewritecomplaint
             // 
-            this.button4.Location = new System.Drawing.Point(947, 416);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(255, 48);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "Сохранить и отправить в базу данных";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.button4savewritecomplaint.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.button4savewritecomplaint.Location = new System.Drawing.Point(947, 416);
+            this.button4savewritecomplaint.Name = "button4savewritecomplaint";
+            this.button4savewritecomplaint.Size = new System.Drawing.Size(255, 48);
+            this.button4savewritecomplaint.TabIndex = 4;
+            this.button4savewritecomplaint.Text = "Сохранить и отправить в базу данных";
+            this.button4savewritecomplaint.UseVisualStyleBackColor = true;
+            this.button4savewritecomplaint.Click += new System.EventHandler(this.button4_Click);
             // 
-            // label9
+            // label9writecomplaint
             // 
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label9.Location = new System.Drawing.Point(11, 95);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(313, 23);
-            this.label9.TabIndex = 3;
-            this.label9.Text = "Ниже напишите вашу жалобу";
+            this.label9writecomplaint.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label9writecomplaint.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label9writecomplaint.Location = new System.Drawing.Point(11, 95);
+            this.label9writecomplaint.Name = "label9writecomplaint";
+            this.label9writecomplaint.Size = new System.Drawing.Size(313, 23);
+            this.label9writecomplaint.TabIndex = 3;
+            this.label9writecomplaint.Text = "Ниже напишите вашу жалобу";
             // 
-            // textBox2
+            // textBox2writecomplaint
             // 
-            this.textBox2.Location = new System.Drawing.Point(3, 121);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(1256, 289);
-            this.textBox2.TabIndex = 2;
+            this.textBox2writecomplaint.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBox2writecomplaint.Location = new System.Drawing.Point(3, 121);
+            this.textBox2writecomplaint.Multiline = true;
+            this.textBox2writecomplaint.Name = "textBox2writecomplaint";
+            this.textBox2writecomplaint.Size = new System.Drawing.Size(1256, 289);
+            this.textBox2writecomplaint.TabIndex = 2;
             // 
-            // textBox1
+            // textBox1bookFIO
             // 
-            this.textBox1.Location = new System.Drawing.Point(185, 31);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(453, 22);
-            this.textBox1.TabIndex = 1;
+            this.textBox1bookFIO.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.textBox1bookFIO.Location = new System.Drawing.Point(185, 31);
+            this.textBox1bookFIO.Name = "textBox1bookFIO";
+            this.textBox1bookFIO.Size = new System.Drawing.Size(453, 22);
+            this.textBox1bookFIO.TabIndex = 1;
             // 
-            // label8
+            // label8bookFIO
             // 
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label8.Location = new System.Drawing.Point(16, 31);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(163, 23);
-            this.label8.TabIndex = 0;
-            this.label8.Text = "Введите ФИО";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.label8bookFIO.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label8bookFIO.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label8bookFIO.Location = new System.Drawing.Point(16, 31);
+            this.label8bookFIO.Name = "label8bookFIO";
+            this.label8bookFIO.Size = new System.Drawing.Size(163, 23);
+            this.label8bookFIO.TabIndex = 0;
+            this.label8bookFIO.Text = "Введите ФИО";
+            this.label8bookFIO.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
-            // timer1
+            // timer1Date
             // 
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            this.timer1Date.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // Form1
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -583,25 +614,26 @@ namespace Project
             this.ClientSize = new System.Drawing.Size(1270, 521);
             this.Controls.Add(this.tabControl1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Form1";
+            this.Name = "MainForm";
             this.Text = "Городская клиническая поликлиника №21";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.tabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.tabPage2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.tabPage3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            this.tabPage4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            this.tabPage5.ResumeLayout(false);
-            this.tabPage5.PerformLayout();
-            this.tabPage6.ResumeLayout(false);
-            this.tabPage6.PerformLayout();
+            this.tabPage1Main.ResumeLayout(false);
+            this.tabPage1Main.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxHosp)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1Hospital)).EndInit();
+            this.tabPage2Employee.ResumeLayout(false);
+            this.tabPage2Employee.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEmployee)).EndInit();
+            this.tabPage3WorkLoad.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4Timetable)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3Diagrams)).EndInit();
+            this.tabPage4Patients.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPatients)).EndInit();
+            this.tabPage5Record.ResumeLayout(false);
+            this.tabPage5Record.PerformLayout();
+            this.tabPage6complaintbook.ResumeLayout(false);
+            this.tabPage6complaintbook.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -609,50 +641,50 @@ namespace Project
         #endregion
 
         public System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TabPage tabPage1Main;
+        private System.Windows.Forms.Label label1Hospital;
         private System.Windows.Forms.Button buttoncomplaintbook;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        public System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button6;
-        public System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TabPage tabPage4;
-        private System.Windows.Forms.TabPage tabPage5;
-        private System.Windows.Forms.TabPage tabPage6;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.PictureBox pictureBoxHosp;
+        private System.Windows.Forms.PictureBox pictureBox1Hospital;
+        public System.Windows.Forms.TabPage tabPage2Employee;
+        private System.Windows.Forms.Label label4Time;
+        private System.Windows.Forms.Label label3Date;
+        private System.Windows.Forms.Label label2Telephone;
+        private System.Windows.Forms.Timer timer1Date;
+        private System.Windows.Forms.Label label6Time;
+        private System.Windows.Forms.Label label5Date;
+        private System.Windows.Forms.Button buttonEmployee;
+        private System.Windows.Forms.DataGridView dataGridViewEmployee;
+        private System.Windows.Forms.Button button6updateEmployee;
+        public System.Windows.Forms.TabPage tabPage3WorkLoad;
+        private System.Windows.Forms.PictureBox pictureBox4Timetable;
+        private System.Windows.Forms.PictureBox pictureBox3Diagrams;
+        private System.Windows.Forms.Label label7announcement;
+        private System.Windows.Forms.TabPage tabPage4Patients;
+        private System.Windows.Forms.TabPage tabPage5Record;
+        private System.Windows.Forms.TabPage tabPage6complaintbook;
+        private System.Windows.Forms.Button button3unloadpatients;
         private System.Windows.Forms.Button buttonunload1;
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.DataGridView dataGridViewPatients;
+        private System.Windows.Forms.Label label9writecomplaint;
+        private System.Windows.Forms.TextBox textBox2writecomplaint;
+        private System.Windows.Forms.TextBox textBox1bookFIO;
+        private System.Windows.Forms.Label label8bookFIO;
+        private System.Windows.Forms.Button button4savewritecomplaint;
+        private System.Windows.Forms.Button button7printwritecomplaint;
+        private System.Windows.Forms.Button button8savereception;
+        private System.Windows.Forms.TextBox textBox7symptoms;
+        private System.Windows.Forms.TextBox textBox6addres;
+        private System.Windows.Forms.TextBox textBox5snils;
+        private System.Windows.Forms.TextBox textBox4age;
+        private System.Windows.Forms.TextBox textBox3FIO;
+        private System.Windows.Forms.Label label14symptoms;
+        private System.Windows.Forms.Label label13addres;
+        private System.Windows.Forms.Label label12SNILS;
+        private System.Windows.Forms.Label label11Age;
+        private System.Windows.Forms.Label label10FIO;
+        private System.Windows.Forms.Button button9Printreception;
+        private System.Windows.Forms.Label label15announcementreception;
     }
 }
 

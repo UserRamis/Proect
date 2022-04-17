@@ -1,7 +1,7 @@
 ﻿
 namespace Project
 {
-    partial class Form2
+    partial class FormAuthorization
     {
         /// <summary>
         /// Required designer variable.
@@ -29,70 +29,70 @@ namespace Project
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.label1Login = new System.Windows.Forms.Label();
+            this.label2Password = new System.Windows.Forms.Label();
+            this.textBox1Login = new System.Windows.Forms.TextBox();
+            this.textBox2Password = new System.Windows.Forms.TextBox();
+            this.button1Continue = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // label1
+            // label1Login
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(113, 71);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(69, 24);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Логин:";
+            this.label1Login.AutoSize = true;
+            this.label1Login.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1Login.Location = new System.Drawing.Point(113, 71);
+            this.label1Login.Name = "label1Login";
+            this.label1Login.Size = new System.Drawing.Size(69, 24);
+            this.label1Login.TabIndex = 0;
+            this.label1Login.Text = "Логин:";
             // 
-            // label2
+            // label2Password
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(113, 145);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(81, 24);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Пароль:";
+            this.label2Password.AutoSize = true;
+            this.label2Password.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2Password.Location = new System.Drawing.Point(113, 145);
+            this.label2Password.Name = "label2Password";
+            this.label2Password.Size = new System.Drawing.Size(81, 24);
+            this.label2Password.TabIndex = 1;
+            this.label2Password.Text = "Пароль:";
             // 
-            // textBox1
+            // textBox1Login
             // 
-            this.textBox1.Location = new System.Drawing.Point(201, 73);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(143, 22);
-            this.textBox1.TabIndex = 2;
+            this.textBox1Login.Location = new System.Drawing.Point(201, 73);
+            this.textBox1Login.Name = "textBox1Login";
+            this.textBox1Login.Size = new System.Drawing.Size(143, 22);
+            this.textBox1Login.TabIndex = 2;
             // 
-            // textBox2
+            // textBox2Password
             // 
-            this.textBox2.Location = new System.Drawing.Point(201, 147);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(143, 22);
-            this.textBox2.TabIndex = 3;
-            this.textBox2.UseSystemPasswordChar = true;
+            this.textBox2Password.Location = new System.Drawing.Point(201, 147);
+            this.textBox2Password.Name = "textBox2Password";
+            this.textBox2Password.Size = new System.Drawing.Size(143, 22);
+            this.textBox2Password.TabIndex = 3;
+            this.textBox2Password.UseSystemPasswordChar = true;
             // 
-            // button1
+            // button1Continue
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(356, 241);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(163, 51);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Продолжить";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1Continue.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button1Continue.Location = new System.Drawing.Point(356, 241);
+            this.button1Continue.Name = "button1Continue";
+            this.button1Continue.Size = new System.Drawing.Size(163, 51);
+            this.button1Continue.TabIndex = 4;
+            this.button1Continue.Text = "Продолжить";
+            this.button1Continue.UseVisualStyleBackColor = true;
+            this.button1Continue.Click += new System.EventHandler(this.button1_Click);
             // 
-            // Form2
+            // FormAuthorization
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(553, 304);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Name = "Form2";
+            this.Controls.Add(this.button1Continue);
+            this.Controls.Add(this.textBox2Password);
+            this.Controls.Add(this.textBox1Login);
+            this.Controls.Add(this.label2Password);
+            this.Controls.Add(this.label1Login);
+            this.Name = "FormAuthorization";
             this.Text = "Окно авторизации";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form2_FormClosed);
             this.Load += new System.EventHandler(this.Form2_Load);
@@ -103,10 +103,10 @@ namespace Project
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label1Login;
+        private System.Windows.Forms.Label label2Password;
+        private System.Windows.Forms.TextBox textBox1Login;
+        private System.Windows.Forms.TextBox textBox2Password;
+        private System.Windows.Forms.Button button1Continue;
     }
 }

@@ -11,22 +11,22 @@ using System.Windows.Forms;
 
 namespace Project
 {
-    public partial class Form2 : Form
+    public partial class FormAuthorization : Form
     {
-        Form1 form1 = new Form1();
+        MainForm form1 = new MainForm();
         Database db = new Database();
         SqlConnection sqlConnection = new SqlConnection(@"Data Source=DESKTOP-AJR95T9\SQLEXPRESS; Initial Catalog=Hospital;Integrated Security=true ");
         
 
-        public Form2()
+        public FormAuthorization()
         {
             InitializeComponent();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            String loginUser = textBox1.Text;
-            String passUser = textBox2.Text;
+            String loginUser = textBox1Login.Text;
+            String passUser = textBox2Password.Text;
             DataTable table = new DataTable();           
             SqlDataAdapter adapter = new SqlDataAdapter();           
             SqlCommand command = new SqlCommand("SELECT * FROM Login WHERE Логин = @uL AND Пароль = @uP", db.getconnection());
@@ -58,5 +58,7 @@ namespace Project
         {
             this.ControlBox = false;
         }
+
+       
     }
 }
