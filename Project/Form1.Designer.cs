@@ -55,6 +55,8 @@ namespace Project
             this.buttonunload1 = new System.Windows.Forms.Button();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.label15 = new System.Windows.Forms.Label();
+            this.button9 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
@@ -74,8 +76,6 @@ namespace Project
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.button9 = new System.Windows.Forms.Button();
-            this.label15 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -100,6 +100,7 @@ namespace Project
             this.tabControl1.Controls.Add(this.tabPage5);
             this.tabControl1.Controls.Add(this.tabPage6);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl1.ItemSize = new System.Drawing.Size(130, 25);
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -108,6 +109,7 @@ namespace Project
             // 
             // tabPage1
             // 
+            this.tabPage1.BackColor = System.Drawing.Color.SlateGray;
             this.tabPage1.Controls.Add(this.label6);
             this.tabPage1.Controls.Add(this.label5);
             this.tabPage1.Controls.Add(this.label4);
@@ -117,20 +119,20 @@ namespace Project
             this.tabPage1.Controls.Add(this.buttoncomplaintbook);
             this.tabPage1.Controls.Add(this.pictureBox2);
             this.tabPage1.Controls.Add(this.pictureBox1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 25);
+            this.tabPage1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tabPage1.Location = new System.Drawing.Point(4, 29);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1262, 492);
+            this.tabPage1.Size = new System.Drawing.Size(1262, 488);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "О поликлинике";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.tabPage1.Text = "Главная страница";
             // 
             // label6
             // 
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label6.Location = new System.Drawing.Point(69, 454);
+            this.label6.Location = new System.Drawing.Point(69, 452);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(142, 20);
             this.label6.TabIndex = 8;
@@ -141,7 +143,7 @@ namespace Project
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.Location = new System.Drawing.Point(69, 417);
+            this.label5.Location = new System.Drawing.Point(69, 415);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(132, 20);
             this.label5.TabIndex = 7;
@@ -170,7 +172,7 @@ namespace Project
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(506, 445);
+            this.label2.Location = new System.Drawing.Point(506, 441);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(515, 25);
             this.label2.TabIndex = 4;
@@ -180,9 +182,9 @@ namespace Project
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(6, 8);
+            this.label1.Location = new System.Drawing.Point(6, 6);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(341, 96);
+            this.label1.Size = new System.Drawing.Size(341, 124);
             this.label1.TabIndex = 3;
             this.label1.Text = "ГАУЗ городская поликлиника № 21\r\nстуденческая поликлиника\r\nрежим работы:\r\nс 8.30 " +
     "до 19:30.\r\n\r\n";
@@ -190,20 +192,21 @@ namespace Project
             // buttoncomplaintbook
             // 
             this.buttoncomplaintbook.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.buttoncomplaintbook.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.buttoncomplaintbook.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttoncomplaintbook.Location = new System.Drawing.Point(38, 317);
+            this.buttoncomplaintbook.Location = new System.Drawing.Point(83, 315);
             this.buttoncomplaintbook.Name = "buttoncomplaintbook";
             this.buttoncomplaintbook.Size = new System.Drawing.Size(173, 64);
             this.buttoncomplaintbook.TabIndex = 2;
             this.buttoncomplaintbook.Text = "Жалобная книга.";
-            this.buttoncomplaintbook.UseVisualStyleBackColor = true;
+            this.buttoncomplaintbook.UseVisualStyleBackColor = false;
             this.buttoncomplaintbook.Click += new System.EventHandler(this.buttoncomplaintbook_Click);
             // 
             // pictureBox2
             // 
             this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(6, 107);
+            this.pictureBox2.Location = new System.Drawing.Point(59, 133);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(226, 176);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -223,21 +226,21 @@ namespace Project
             // 
             // tabPage2
             // 
+            this.tabPage2.BackColor = System.Drawing.Color.SlateGray;
             this.tabPage2.Controls.Add(this.button6);
             this.tabPage2.Controls.Add(this.dataGridView1);
             this.tabPage2.Controls.Add(this.button5);
-            this.tabPage2.Location = new System.Drawing.Point(4, 25);
+            this.tabPage2.Location = new System.Drawing.Point(4, 29);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1262, 492);
+            this.tabPage2.Size = new System.Drawing.Size(1262, 488);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = " Сотрудники";
-            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // button6
             // 
             this.button6.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.button6.Location = new System.Drawing.Point(426, 429);
+            this.button6.Location = new System.Drawing.Point(426, 425);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(155, 47);
             this.button6.TabIndex = 6;
@@ -262,7 +265,7 @@ namespace Project
             // button5
             // 
             this.button5.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.button5.Location = new System.Drawing.Point(141, 429);
+            this.button5.Location = new System.Drawing.Point(141, 425);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(161, 47);
             this.button5.TabIndex = 4;
@@ -272,16 +275,16 @@ namespace Project
             // 
             // tabPage3
             // 
+            this.tabPage3.BackColor = System.Drawing.Color.SlateGray;
             this.tabPage3.Controls.Add(this.pictureBox4);
             this.tabPage3.Controls.Add(this.pictureBox3);
             this.tabPage3.Controls.Add(this.label7);
-            this.tabPage3.Location = new System.Drawing.Point(4, 25);
+            this.tabPage3.Location = new System.Drawing.Point(4, 29);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1262, 492);
+            this.tabPage3.Size = new System.Drawing.Size(1262, 488);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Загруженность врачей";
-            this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // pictureBox4
             // 
@@ -315,16 +318,16 @@ namespace Project
             // 
             // tabPage4
             // 
+            this.tabPage4.BackColor = System.Drawing.Color.SlateGray;
             this.tabPage4.Controls.Add(this.button3);
             this.tabPage4.Controls.Add(this.buttonunload1);
             this.tabPage4.Controls.Add(this.dataGridView2);
-            this.tabPage4.Location = new System.Drawing.Point(4, 25);
+            this.tabPage4.Location = new System.Drawing.Point(4, 29);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(1262, 492);
+            this.tabPage4.Size = new System.Drawing.Size(1262, 488);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Пациенты";
-            this.tabPage4.UseVisualStyleBackColor = true;
             // 
             // button3
             // 
@@ -360,6 +363,7 @@ namespace Project
             // 
             // tabPage5
             // 
+            this.tabPage5.BackColor = System.Drawing.Color.SlateGray;
             this.tabPage5.Controls.Add(this.label15);
             this.tabPage5.Controls.Add(this.button9);
             this.tabPage5.Controls.Add(this.button8);
@@ -373,13 +377,33 @@ namespace Project
             this.tabPage5.Controls.Add(this.label12);
             this.tabPage5.Controls.Add(this.label11);
             this.tabPage5.Controls.Add(this.label10);
-            this.tabPage5.Location = new System.Drawing.Point(4, 25);
+            this.tabPage5.Location = new System.Drawing.Point(4, 29);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(1262, 483);
+            this.tabPage5.Size = new System.Drawing.Size(1262, 488);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Запись на приём";
-            this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // label15
+            // 
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label15.Location = new System.Drawing.Point(6, 22);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(1259, 54);
+            this.label15.TabIndex = 16;
+            this.label15.Text = "Уважаемые сотрудники! Запись на приём осуществялется строго в будние дни с 7:00 д" +
+    "о 16:30.\r\n";
+            // 
+            // button9
+            // 
+            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button9.Location = new System.Drawing.Point(692, 400);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(185, 77);
+            this.button9.TabIndex = 15;
+            this.button9.Text = "Печать направления";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // button8
             // 
@@ -479,19 +503,19 @@ namespace Project
             // 
             // tabPage6
             // 
+            this.tabPage6.BackColor = System.Drawing.Color.SlateGray;
             this.tabPage6.Controls.Add(this.button7);
             this.tabPage6.Controls.Add(this.button4);
             this.tabPage6.Controls.Add(this.label9);
             this.tabPage6.Controls.Add(this.textBox2);
             this.tabPage6.Controls.Add(this.textBox1);
             this.tabPage6.Controls.Add(this.label8);
-            this.tabPage6.Location = new System.Drawing.Point(4, 25);
+            this.tabPage6.Location = new System.Drawing.Point(4, 29);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(1262, 483);
+            this.tabPage6.Size = new System.Drawing.Size(1262, 488);
             this.tabPage6.TabIndex = 5;
             this.tabPage6.Text = "Жалобная книга";
-            this.tabPage6.UseVisualStyleBackColor = true;
             // 
             // button7
             // 
@@ -551,33 +575,14 @@ namespace Project
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // button9
-            // 
-            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button9.Location = new System.Drawing.Point(692, 400);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(185, 77);
-            this.button9.TabIndex = 15;
-            this.button9.Text = "Печать направления";
-            this.button9.UseVisualStyleBackColor = true;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
-            // 
-            // label15
-            // 
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label15.Location = new System.Drawing.Point(6, 22);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(1259, 54);
-            this.label15.TabIndex = 16;
-            this.label15.Text = "Уважаемые сотрудники! Запись на приём осуществялется строго в будние дни с 7:00 д" +
-    "о 16:30.\r\n";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.SlateGray;
             this.ClientSize = new System.Drawing.Size(1270, 521);
             this.Controls.Add(this.tabControl1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "Городская клиническая поликлиника №21";
             this.Load += new System.EventHandler(this.Form1_Load);
