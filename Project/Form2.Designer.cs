@@ -29,6 +29,7 @@ namespace Project
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAuthorization));
             this.label1Login = new System.Windows.Forms.Label();
             this.label2Password = new System.Windows.Forms.Label();
             this.textBox1Login = new System.Windows.Forms.TextBox();
@@ -92,6 +93,7 @@ namespace Project
             this.Controls.Add(this.textBox1Login);
             this.Controls.Add(this.label2Password);
             this.Controls.Add(this.label1Login);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormAuthorization";
             this.Text = "Окно авторизации";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form2_FormClosed);

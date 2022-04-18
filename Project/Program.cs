@@ -19,7 +19,7 @@ namespace Project
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormAuthorization());
+            Application.Run(new MainForm());
         }
     }
 }

@@ -28,10 +28,14 @@ namespace Project
 
         private string result = "";
 
+        PrintDocument printDocument = new PrintDocument();
+        
+        PrintDialog printDialog = new PrintDialog();
+
 
         public MainForm()
         {
-    
+
             InitializeComponent();
 
         }
@@ -41,6 +45,11 @@ namespace Project
             timer1Date.Interval = 10;
             timer1Date.Enabled = true;
             timer1Date.Start();
+
+            
+
+
+
 
         }
 
@@ -52,7 +61,7 @@ namespace Project
 
         private void button2_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -63,13 +72,16 @@ namespace Project
 
             LoadData1();
 
+            
+
+            
 
         }
 
-        
-    
-    
-    private void LoadData1()
+
+
+
+        private void LoadData1()
         {
             try
             {
@@ -87,7 +99,7 @@ namespace Project
 
                 dataGridViewEmployee.DataSource = dataSet.Tables["Employee"];
 
-                for(int i=0; i<dataGridViewEmployee.Rows.Count;i++)
+                for (int i = 0; i < dataGridViewEmployee.Rows.Count; i++)
                 {
                     DataGridViewLinkCell linkCell = new DataGridViewLinkCell();
 
@@ -99,6 +111,16 @@ namespace Project
 
                 MessageBox.Show(ex.Message, "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
+
+            foreach (DataGridViewColumn column in dataGridViewEmployee.Columns)
+            {
+                column.SortMode = DataGridViewColumnSortMode.NotSortable;
+                checkBoxEmployee.Text = "Включить сортировку";
+            }
+
+            
+
         }
 
 
@@ -136,13 +158,13 @@ namespace Project
         {
             try
             {
-                if(e.ColumnIndex==10)
+                if (e.ColumnIndex == 10)
                 {
                     string task = dataGridViewEmployee.Rows[e.RowIndex].Cells[10].Value.ToString();
 
-                    if(task=="Delete")
+                    if (task == "Delete")
                     {
-                        if(MessageBox.Show("Удалить эту строку?","Удаление",MessageBoxButtons.YesNo,MessageBoxIcon.Question)==DialogResult.Yes)
+                        if (MessageBox.Show("Удалить эту строку?", "Удаление", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                         {
                             int rowIndex = e.RowIndex;
 
@@ -185,7 +207,7 @@ namespace Project
 
                         newRowAdding = false;
                     }
-                    
+
                     ReloadData1();
                 }
             }
@@ -199,7 +221,7 @@ namespace Project
         {
             try
             {
-                if(newRowAdding==false)
+                if (newRowAdding == false)
                 {
                     newRowAdding = true;
 
@@ -219,7 +241,7 @@ namespace Project
                 MessageBox.Show(ex.Message, "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-            //datagridview2
+        //datagridview2
         private void button2_Click_1(object sender, EventArgs e)
         {
             sqlConnection = new SqlConnection(@"Data Source=DESKTOP-AJR95T9\SQLEXPRESS; Initial Catalog=Hospital;Integrated Security=true ");
@@ -227,6 +249,10 @@ namespace Project
             sqlConnection.Open();
 
             LoadData2();
+
+            
+
+
         }
 
         private void LoadData2()
@@ -259,6 +285,13 @@ namespace Project
 
                 MessageBox.Show(ex.Message, "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
+            foreach (DataGridViewColumn column in dataGridViewPatients.Columns)
+            {
+                column.SortMode = DataGridViewColumnSortMode.NotSortable;
+                checkBoxPatients.Text = "Включить сортировку";
+            }
+
         }
 
         private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -313,7 +346,7 @@ namespace Project
                         sqlDataAdapter.Update(dataSet, "Patients");
 
                         newRowAdding = false;
-                    }                  
+                    }
                     ReloadData2();
                 }
             }
@@ -388,7 +421,7 @@ namespace Project
         {
             using (StreamWriter w = File.AppendText(@"Жалобная книга.txt"))
             {
-                w.WriteLine("ФИО: "+textBox1bookFIO.Text + "\n"+ "Жалоба: "+ textBox2writecomplaint.Text);
+                w.WriteLine("ФИО: " + textBox1bookFIO.Text + "\n" + "Жалоба: " + textBox2writecomplaint.Text);
             }
 
             SqlConnection sqlConnection123 = new SqlConnection(@"Data Source=DESKTOP-AJR95T9\SQLEXPRESS; Initial Catalog=Hospital;Integrated Security=true ");
@@ -397,7 +430,7 @@ namespace Project
 
             command123.Parameters.AddWithValue("ФИО", textBox1bookFIO.Text);
             command123.Parameters.AddWithValue("Жалоба", textBox2writecomplaint.Text);
-           
+
             MessageBox.Show("Успешно! Данные сохранены в базе данных и в файле", command123.ExecuteNonQuery().ToString());
         }
 
@@ -407,18 +440,18 @@ namespace Project
             result = textBox1bookFIO.Text;
             result += textBox2writecomplaint.Text;
             // объект для печати
-            PrintDocument printDocument = new PrintDocument();
+            
             // обработчик события печати
             printDocument.PrintPage += PrintPageHandler;
             // диалог настройки печати
-            PrintDialog printDialog = new PrintDialog();
+           
             // установка объекта печати для его настройки
             printDialog.Document = printDocument;
             // если в диалоге было нажато ОК
             if (printDialog.ShowDialog() == DialogResult.OK)
                 printDialog.Document.Print(); // печатаем
         }
-    
+
         void PrintPageHandler(object sender, PrintPageEventArgs e)
         {
             // печать строки result
@@ -429,19 +462,19 @@ namespace Project
         {
             SqlConnection sqlConnection12 = new SqlConnection(@"Data Source=DESKTOP-AJR95T9\SQLEXPRESS; Initial Catalog=Hospital;Integrated Security=true ");
             sqlConnection12.Open();
-            SqlCommand command12 = new SqlCommand($"INSERT INTO [Record] (ФИО, Возраст, СНИЛС, Адрес, Симптомы) VALUES (@ФИО, @Возраст, @СНИЛС, @Адрес, @Симптомы)",sqlConnection12);
-           
+            SqlCommand command12 = new SqlCommand($"INSERT INTO [Record] (ФИО, Возраст, СНИЛС, Адрес, Симптомы) VALUES (@ФИО, @Возраст, @СНИЛС, @Адрес, @Симптомы)", sqlConnection12);
+
             command12.Parameters.AddWithValue("ФИО", textBox3FIO.Text);
             command12.Parameters.AddWithValue("Возраст", textBox4age.Text);
             command12.Parameters.AddWithValue("СНИЛС", textBox5snils.Text);
             command12.Parameters.AddWithValue("Адрес", textBox6addres.Text);
             command12.Parameters.AddWithValue("Симптомы", textBox7symptoms.Text);
 
-            MessageBox.Show("Успешно! Данные сохранены в базе данных и в файле",command12.ExecuteNonQuery().ToString());
+            MessageBox.Show("Успешно! Данные сохранены в базе данных и в файле", command12.ExecuteNonQuery().ToString());
 
             using (StreamWriter w1 = File.AppendText(@"Записи на прием.txt"))
             {
-                w1.WriteLine("ФИО: " + textBox3FIO.Text + "\n" + "Возраст: " + textBox4age.Text+"\nСНИЛС: "+ textBox5snils.Text + "\nАдрес: " + textBox6addres.Text + "\nСимптомы: " + textBox7symptoms.Text);
+                w1.WriteLine("ФИО: " + textBox3FIO.Text + "\n" + "Возраст: " + textBox4age.Text + "\nСНИЛС: " + textBox5snils.Text + "\nАдрес: " + textBox6addres.Text + "\nСимптомы: " + textBox7symptoms.Text);
             }
 
             textBox3FIO.Clear();
@@ -455,28 +488,79 @@ namespace Project
 
         private void button9_Click(object sender, EventArgs e)
         {
-            
+
             result = textBox3FIO.Text;
             result += textBox4age.Text;
             result += textBox5snils.Text;
             result += textBox6addres.Text;
             result += textBox7symptoms.Text;
 
-            PrintDocument printDocument = new PrintDocument();
-            
+           
+
             printDocument.PrintPage += PrintPageHandler;
+
             
-            PrintDialog printDialog = new PrintDialog();
-            
+
             printDialog.Document = printDocument;
-            
+
             if (printDialog.ShowDialog() == DialogResult.OK)
-                printDialog.Document.Print(); 
+                printDialog.Document.Print();
         }
 
         private void buttoncomplaintbook_Click(object sender, EventArgs e)
         {
             tabControl1.SelectTab(tabPage6complaintbook);
         }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckBox check1 = (CheckBox)sender;
+            if (check1.Checked == true)
+            {
+                foreach (DataGridViewColumn column in dataGridViewEmployee.Columns)
+                {
+                    column.SortMode = DataGridViewColumnSortMode.Automatic;
+                    checkBoxEmployee.Text = "Выключить сортировку";
+                }
+            }
+            if (check1.Checked == false)
+            {
+                foreach (DataGridViewColumn column in dataGridViewEmployee.Columns)
+                {
+                    column.SortMode = DataGridViewColumnSortMode.NotSortable;
+                }
+                LoadData1();
+
+            }
+
+        }
+
+        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckBox check2 = (CheckBox)sender;
+            if (check2.Checked == true)
+            {
+                foreach (DataGridViewColumn column in dataGridViewPatients.Columns)
+                {
+                    column.SortMode = DataGridViewColumnSortMode.Automatic;
+                    checkBoxPatients.Text = "Выключить сортировку";
+                }
+            }
+            if (check2.Checked == false)
+            {
+                foreach (DataGridViewColumn column in dataGridViewPatients.Columns)
+                {
+                    column.SortMode = DataGridViewColumnSortMode.NotSortable;
+                }
+                LoadData2();
+
+            }
+        }
     }
 }
+

@@ -76,6 +76,8 @@ namespace Project
             this.textBox1bookFIO = new System.Windows.Forms.TextBox();
             this.label8bookFIO = new System.Windows.Forms.Label();
             this.timer1Date = new System.Windows.Forms.Timer(this.components);
+            this.checkBoxEmployee = new System.Windows.Forms.CheckBox();
+            this.checkBoxPatients = new System.Windows.Forms.CheckBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1Main.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxHosp)).BeginInit();
@@ -230,6 +232,7 @@ namespace Project
             // tabPage2Employee
             // 
             this.tabPage2Employee.BackColor = System.Drawing.Color.SlateGray;
+            this.tabPage2Employee.Controls.Add(this.checkBoxEmployee);
             this.tabPage2Employee.Controls.Add(this.button6updateEmployee);
             this.tabPage2Employee.Controls.Add(this.dataGridViewEmployee);
             this.tabPage2Employee.Controls.Add(this.buttonEmployee);
@@ -244,7 +247,7 @@ namespace Project
             // 
             this.button6updateEmployee.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.button6updateEmployee.AutoSize = true;
-            this.button6updateEmployee.Location = new System.Drawing.Point(426, 425);
+            this.button6updateEmployee.Location = new System.Drawing.Point(458, 426);
             this.button6updateEmployee.Name = "button6updateEmployee";
             this.button6updateEmployee.Size = new System.Drawing.Size(155, 47);
             this.button6updateEmployee.TabIndex = 6;
@@ -257,11 +260,11 @@ namespace Project
             this.dataGridViewEmployee.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridViewEmployee.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewEmployee.Location = new System.Drawing.Point(0, 4);
+            this.dataGridViewEmployee.Location = new System.Drawing.Point(0, 0);
             this.dataGridViewEmployee.Name = "dataGridViewEmployee";
             this.dataGridViewEmployee.RowHeadersWidth = 51;
             this.dataGridViewEmployee.RowTemplate.Height = 24;
-            this.dataGridViewEmployee.Size = new System.Drawing.Size(1259, 420);
+            this.dataGridViewEmployee.Size = new System.Drawing.Size(1259, 401);
             this.dataGridViewEmployee.TabIndex = 5;
             this.dataGridViewEmployee.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridViewEmployee.UserAddedRow += new System.Windows.Forms.DataGridViewRowEventHandler(this.dataGridView1_UserAddedRow);
@@ -327,6 +330,7 @@ namespace Project
             // tabPage4Patients
             // 
             this.tabPage4Patients.BackColor = System.Drawing.Color.SlateGray;
+            this.tabPage4Patients.Controls.Add(this.checkBoxPatients);
             this.tabPage4Patients.Controls.Add(this.button3unloadpatients);
             this.tabPage4Patients.Controls.Add(this.buttonunload1);
             this.tabPage4Patients.Controls.Add(this.dataGridViewPatients);
@@ -340,7 +344,7 @@ namespace Project
             // button3unloadpatients
             // 
             this.button3unloadpatients.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.button3unloadpatients.Location = new System.Drawing.Point(570, 421);
+            this.button3unloadpatients.Location = new System.Drawing.Point(454, 421);
             this.button3unloadpatients.Name = "button3unloadpatients";
             this.button3unloadpatients.Size = new System.Drawing.Size(132, 38);
             this.button3unloadpatients.TabIndex = 2;
@@ -606,6 +610,32 @@ namespace Project
             // 
             this.timer1Date.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // checkBoxEmployee
+            // 
+            this.checkBoxEmployee.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.checkBoxEmployee.AutoSize = true;
+            this.checkBoxEmployee.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.checkBoxEmployee.Location = new System.Drawing.Point(751, 433);
+            this.checkBoxEmployee.Name = "checkBoxEmployee";
+            this.checkBoxEmployee.Size = new System.Drawing.Size(268, 29);
+            this.checkBoxEmployee.TabIndex = 7;
+            this.checkBoxEmployee.Text = "ВКЛ/ВЫКЛ СОРТИРОВКУ";
+            this.checkBoxEmployee.UseVisualStyleBackColor = true;
+            this.checkBoxEmployee.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // checkBoxPatients
+            // 
+            this.checkBoxPatients.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.checkBoxPatients.AutoSize = true;
+            this.checkBoxPatients.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.checkBoxPatients.Location = new System.Drawing.Point(790, 424);
+            this.checkBoxPatients.Name = "checkBoxPatients";
+            this.checkBoxPatients.Size = new System.Drawing.Size(268, 29);
+            this.checkBoxPatients.TabIndex = 3;
+            this.checkBoxPatients.Text = "ВКЛ/ВЫКЛ СОРТИРОВКУ";
+            this.checkBoxPatients.UseVisualStyleBackColor = true;
+            this.checkBoxPatients.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -629,6 +659,7 @@ namespace Project
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4Timetable)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3Diagrams)).EndInit();
             this.tabPage4Patients.ResumeLayout(false);
+            this.tabPage4Patients.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPatients)).EndInit();
             this.tabPage5Record.ResumeLayout(false);
             this.tabPage5Record.PerformLayout();
@@ -685,6 +716,8 @@ namespace Project
         private System.Windows.Forms.Label label10FIO;
         private System.Windows.Forms.Button button9Printreception;
         private System.Windows.Forms.Label label15announcementreception;
+        private System.Windows.Forms.CheckBox checkBoxEmployee;
+        private System.Windows.Forms.CheckBox checkBoxPatients;
     }
 }
 
