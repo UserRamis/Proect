@@ -43,6 +43,7 @@ namespace Project
             this.pictureBoxHosp = new System.Windows.Forms.PictureBox();
             this.pictureBox1Hospital = new System.Windows.Forms.PictureBox();
             this.tabPage2Employee = new System.Windows.Forms.TabPage();
+            this.checkBoxEmployee = new System.Windows.Forms.CheckBox();
             this.button6updateEmployee = new System.Windows.Forms.Button();
             this.dataGridViewEmployee = new System.Windows.Forms.DataGridView();
             this.buttonEmployee = new System.Windows.Forms.Button();
@@ -51,6 +52,7 @@ namespace Project
             this.pictureBox3Diagrams = new System.Windows.Forms.PictureBox();
             this.label7announcement = new System.Windows.Forms.Label();
             this.tabPage4Patients = new System.Windows.Forms.TabPage();
+            this.checkBoxPatients = new System.Windows.Forms.CheckBox();
             this.button3unloadpatients = new System.Windows.Forms.Button();
             this.buttonunload1 = new System.Windows.Forms.Button();
             this.dataGridViewPatients = new System.Windows.Forms.DataGridView();
@@ -75,9 +77,18 @@ namespace Project
             this.textBox2writecomplaint = new System.Windows.Forms.TextBox();
             this.textBox1bookFIO = new System.Windows.Forms.TextBox();
             this.label8bookFIO = new System.Windows.Forms.Label();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
             this.timer1Date = new System.Windows.Forms.Timer(this.components);
-            this.checkBoxEmployee = new System.Windows.Forms.CheckBox();
-            this.checkBoxPatients = new System.Windows.Forms.CheckBox();
+            this.pictureBoxOtkaz = new System.Windows.Forms.PictureBox();
+            this.pictureBoxMED = new System.Windows.Forms.PictureBox();
+            this.pictureBoxOtkaz2 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxMRT = new System.Windows.Forms.PictureBox();
+            this.pictureBoxFizra = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1Main.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxHosp)).BeginInit();
@@ -91,6 +102,12 @@ namespace Project
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPatients)).BeginInit();
             this.tabPage5Record.SuspendLayout();
             this.tabPage6complaintbook.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOtkaz)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMED)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOtkaz2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMRT)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFizra)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -101,6 +118,7 @@ namespace Project
             this.tabControl1.Controls.Add(this.tabPage4Patients);
             this.tabControl1.Controls.Add(this.tabPage5Record);
             this.tabControl1.Controls.Add(this.tabPage6complaintbook);
+            this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.ItemSize = new System.Drawing.Size(130, 25);
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
@@ -243,6 +261,19 @@ namespace Project
             this.tabPage2Employee.TabIndex = 1;
             this.tabPage2Employee.Text = " Сотрудники";
             // 
+            // checkBoxEmployee
+            // 
+            this.checkBoxEmployee.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.checkBoxEmployee.AutoSize = true;
+            this.checkBoxEmployee.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.checkBoxEmployee.Location = new System.Drawing.Point(751, 433);
+            this.checkBoxEmployee.Name = "checkBoxEmployee";
+            this.checkBoxEmployee.Size = new System.Drawing.Size(268, 29);
+            this.checkBoxEmployee.TabIndex = 7;
+            this.checkBoxEmployee.Text = "ВКЛ/ВЫКЛ СОРТИРОВКУ";
+            this.checkBoxEmployee.UseVisualStyleBackColor = true;
+            this.checkBoxEmployee.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
             // button6updateEmployee
             // 
             this.button6updateEmployee.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
@@ -340,6 +371,19 @@ namespace Project
             this.tabPage4Patients.Size = new System.Drawing.Size(1262, 488);
             this.tabPage4Patients.TabIndex = 3;
             this.tabPage4Patients.Text = "Пациенты";
+            // 
+            // checkBoxPatients
+            // 
+            this.checkBoxPatients.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.checkBoxPatients.AutoSize = true;
+            this.checkBoxPatients.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.checkBoxPatients.Location = new System.Drawing.Point(790, 424);
+            this.checkBoxPatients.Name = "checkBoxPatients";
+            this.checkBoxPatients.Size = new System.Drawing.Size(268, 29);
+            this.checkBoxPatients.TabIndex = 3;
+            this.checkBoxPatients.Text = "ВКЛ/ВЫКЛ СОРТИРОВКУ";
+            this.checkBoxPatients.UseVisualStyleBackColor = true;
+            this.checkBoxPatients.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
             // 
             // button3unloadpatients
             // 
@@ -606,35 +650,129 @@ namespace Project
             this.label8bookFIO.Text = "Введите ФИО";
             this.label8bookFIO.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
+            // tabPage1
+            // 
+            this.tabPage1.BackColor = System.Drawing.Color.SlateGray;
+            this.tabPage1.Controls.Add(this.label5);
+            this.tabPage1.Controls.Add(this.label4);
+            this.tabPage1.Controls.Add(this.label3);
+            this.tabPage1.Controls.Add(this.label2);
+            this.tabPage1.Controls.Add(this.label1);
+            this.tabPage1.Controls.Add(this.pictureBoxFizra);
+            this.tabPage1.Controls.Add(this.pictureBoxMRT);
+            this.tabPage1.Controls.Add(this.pictureBoxOtkaz2);
+            this.tabPage1.Controls.Add(this.pictureBoxMED);
+            this.tabPage1.Controls.Add(this.pictureBoxOtkaz);
+            this.tabPage1.Location = new System.Drawing.Point(4, 29);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(1262, 488);
+            this.tabPage1.TabIndex = 6;
+            this.tabPage1.Text = "Медицинские бланки";
+            // 
             // timer1Date
             // 
             this.timer1Date.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // checkBoxEmployee
+            // pictureBoxOtkaz
             // 
-            this.checkBoxEmployee.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.checkBoxEmployee.AutoSize = true;
-            this.checkBoxEmployee.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.checkBoxEmployee.Location = new System.Drawing.Point(751, 433);
-            this.checkBoxEmployee.Name = "checkBoxEmployee";
-            this.checkBoxEmployee.Size = new System.Drawing.Size(268, 29);
-            this.checkBoxEmployee.TabIndex = 7;
-            this.checkBoxEmployee.Text = "ВКЛ/ВЫКЛ СОРТИРОВКУ";
-            this.checkBoxEmployee.UseVisualStyleBackColor = true;
-            this.checkBoxEmployee.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            this.pictureBoxOtkaz.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxOtkaz.Image")));
+            this.pictureBoxOtkaz.Location = new System.Drawing.Point(29, 82);
+            this.pictureBoxOtkaz.Name = "pictureBoxOtkaz";
+            this.pictureBoxOtkaz.Size = new System.Drawing.Size(180, 212);
+            this.pictureBoxOtkaz.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxOtkaz.TabIndex = 0;
+            this.pictureBoxOtkaz.TabStop = false;
+            this.pictureBoxOtkaz.Click += new System.EventHandler(this.pictureBoxOtkaz_Click);
             // 
-            // checkBoxPatients
+            // pictureBoxMED
             // 
-            this.checkBoxPatients.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.checkBoxPatients.AutoSize = true;
-            this.checkBoxPatients.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.checkBoxPatients.Location = new System.Drawing.Point(790, 424);
-            this.checkBoxPatients.Name = "checkBoxPatients";
-            this.checkBoxPatients.Size = new System.Drawing.Size(268, 29);
-            this.checkBoxPatients.TabIndex = 3;
-            this.checkBoxPatients.Text = "ВКЛ/ВЫКЛ СОРТИРОВКУ";
-            this.checkBoxPatients.UseVisualStyleBackColor = true;
-            this.checkBoxPatients.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
+            this.pictureBoxMED.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxMED.Image")));
+            this.pictureBoxMED.Location = new System.Drawing.Point(503, 82);
+            this.pictureBoxMED.Name = "pictureBoxMED";
+            this.pictureBoxMED.Size = new System.Drawing.Size(162, 212);
+            this.pictureBoxMED.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxMED.TabIndex = 1;
+            this.pictureBoxMED.TabStop = false;
+            this.pictureBoxMED.Click += new System.EventHandler(this.pictureBoxMED_Click);
+            // 
+            // pictureBoxOtkaz2
+            // 
+            this.pictureBoxOtkaz2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxOtkaz2.Image")));
+            this.pictureBoxOtkaz2.Location = new System.Drawing.Point(944, 82);
+            this.pictureBoxOtkaz2.Name = "pictureBoxOtkaz2";
+            this.pictureBoxOtkaz2.Size = new System.Drawing.Size(147, 212);
+            this.pictureBoxOtkaz2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxOtkaz2.TabIndex = 2;
+            this.pictureBoxOtkaz2.TabStop = false;
+            this.pictureBoxOtkaz2.Click += new System.EventHandler(this.pictureBoxOtkaz2_Click);
+            // 
+            // pictureBoxMRT
+            // 
+            this.pictureBoxMRT.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxMRT.Image")));
+            this.pictureBoxMRT.Location = new System.Drawing.Point(731, 82);
+            this.pictureBoxMRT.Name = "pictureBoxMRT";
+            this.pictureBoxMRT.Size = new System.Drawing.Size(157, 212);
+            this.pictureBoxMRT.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxMRT.TabIndex = 3;
+            this.pictureBoxMRT.TabStop = false;
+            this.pictureBoxMRT.Click += new System.EventHandler(this.pictureBoxMRT_Click);
+            // 
+            // pictureBoxFizra
+            // 
+            this.pictureBoxFizra.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxFizra.Image")));
+            this.pictureBoxFizra.Location = new System.Drawing.Point(272, 82);
+            this.pictureBoxFizra.Name = "pictureBoxFizra";
+            this.pictureBoxFizra.Size = new System.Drawing.Size(171, 212);
+            this.pictureBoxFizra.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxFizra.TabIndex = 4;
+            this.pictureBoxFizra.TabStop = false;
+            this.pictureBoxFizra.Click += new System.EventHandler(this.pictureBoxFizra_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(50, 324);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(149, 17);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Отказ от вакцинации";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(269, 324);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(174, 34);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Освобождение от уроков\r\n Физической культуры";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(540, 324);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(110, 51);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Согласие на\r\nмедицинское \r\nвмешательство";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(728, 324);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(176, 34);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Согласие на проведение \r\n             МРТ";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(941, 324);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(177, 17);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "Отказ от госпитализации";
             // 
             // MainForm
             // 
@@ -665,6 +803,13 @@ namespace Project
             this.tabPage5Record.PerformLayout();
             this.tabPage6complaintbook.ResumeLayout(false);
             this.tabPage6complaintbook.PerformLayout();
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOtkaz)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMED)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOtkaz2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMRT)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFizra)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -718,6 +863,17 @@ namespace Project
         private System.Windows.Forms.Label label15announcementreception;
         private System.Windows.Forms.CheckBox checkBoxEmployee;
         private System.Windows.Forms.CheckBox checkBoxPatients;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.PictureBox pictureBoxFizra;
+        private System.Windows.Forms.PictureBox pictureBoxMRT;
+        private System.Windows.Forms.PictureBox pictureBoxOtkaz2;
+        private System.Windows.Forms.PictureBox pictureBoxMED;
+        private System.Windows.Forms.PictureBox pictureBoxOtkaz;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
     }
 }
 

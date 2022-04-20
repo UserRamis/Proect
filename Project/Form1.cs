@@ -11,6 +11,8 @@ using System.Data.SqlClient;
 using System.Data.OleDb;
 using System.IO;
 using System.Drawing.Printing;
+using System.Reflection;
+using Word = Microsoft.Office.Interop.Word;
 
 namespace Project
 {
@@ -29,7 +31,7 @@ namespace Project
         private string result = "";
 
         PrintDocument printDocument = new PrintDocument();
-        
+
         PrintDialog printDialog = new PrintDialog();
 
 
@@ -46,7 +48,7 @@ namespace Project
             timer1Date.Enabled = true;
             timer1Date.Start();
 
-            
+
 
 
 
@@ -72,9 +74,9 @@ namespace Project
 
             LoadData1();
 
-            
 
-            
+
+
 
         }
 
@@ -119,7 +121,7 @@ namespace Project
                 checkBoxEmployee.Text = "Включить сортировку";
             }
 
-            
+
 
         }
 
@@ -250,7 +252,7 @@ namespace Project
 
             LoadData2();
 
-            
+
 
 
         }
@@ -440,11 +442,11 @@ namespace Project
             result = textBox1bookFIO.Text;
             result += textBox2writecomplaint.Text;
             // объект для печати
-            
+
             // обработчик события печати
             printDocument.PrintPage += PrintPageHandler;
             // диалог настройки печати
-           
+
             // установка объекта печати для его настройки
             printDialog.Document = printDocument;
             // если в диалоге было нажато ОК
@@ -495,11 +497,11 @@ namespace Project
             result += textBox6addres.Text;
             result += textBox7symptoms.Text;
 
-           
+
 
             printDocument.PrintPage += PrintPageHandler;
 
-            
+
 
             printDialog.Document = printDocument;
 
@@ -514,7 +516,7 @@ namespace Project
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
-            
+
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
@@ -561,6 +563,42 @@ namespace Project
 
             }
         }
+
+        private void pictureBoxOtkaz_Click(object sender, EventArgs e)
+        {
+            Form3 form3 = new Form3();
+            form3.Show();
+        }
+
+        private void pictureBoxFizra_Click(object sender, EventArgs e)
+        {
+            Form4 form4 = new Form4();
+            form4.Show();
+        }
+
+        private void pictureBoxMED_Click(object sender, EventArgs e)
+        {
+            Form5 form5 = new Form5();
+            form5.Show();
+        }
+
+        private void pictureBoxMRT_Click(object sender, EventArgs e)
+        {
+            Form6 form6 = new Form6();
+            form6.Show();
+        }
+
+        private void pictureBoxOtkaz2_Click(object sender, EventArgs e)
+        {
+            Form7 form7 = new Form7();
+            form7.Show();
+        }
     }
+
+    
 }
 
+
+
+
+//@"C:\Users\user9\Desktop\inform.DOCX";
