@@ -37,7 +37,7 @@ namespace Project
                 Word.Bookmarks wBookmarks = doc.Bookmarks;
                 Word.Range wRange;
                 int i = 0;
-                string[] data = new string[7] { textBox1.Text, textBox2.Text, textBox3.Text, textBox4.Text, textBox5.Text, textBox6.Text, textBox7.Text };
+                string[] data = new string[7] { textBoxFIO.Text, textBoxData.Text, textBoxMonth.Text, textBoxYear.Text, textBoxAdres.Text, textBoxFIOMED.Text, textBoxVAK.Text };
                 foreach (Word.Bookmark mark in wBookmarks)
                 {
 

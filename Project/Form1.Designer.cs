@@ -78,17 +78,17 @@ namespace Project
             this.textBox1bookFIO = new System.Windows.Forms.TextBox();
             this.label8bookFIO = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.timer1Date = new System.Windows.Forms.Timer(this.components);
-            this.pictureBoxOtkaz = new System.Windows.Forms.PictureBox();
-            this.pictureBoxMED = new System.Windows.Forms.PictureBox();
-            this.pictureBoxOtkaz2 = new System.Windows.Forms.PictureBox();
-            this.pictureBoxMRT = new System.Windows.Forms.PictureBox();
-            this.pictureBoxFizra = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBoxFizra = new System.Windows.Forms.PictureBox();
+            this.pictureBoxMRT = new System.Windows.Forms.PictureBox();
+            this.pictureBoxOtkaz2 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxMED = new System.Windows.Forms.PictureBox();
+            this.pictureBoxOtkaz = new System.Windows.Forms.PictureBox();
+            this.timer1Date = new System.Windows.Forms.Timer(this.components);
             this.tabControl1.SuspendLayout();
             this.tabPage1Main.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxHosp)).BeginInit();
@@ -103,11 +103,11 @@ namespace Project
             this.tabPage5Record.SuspendLayout();
             this.tabPage6complaintbook.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOtkaz)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMED)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOtkaz2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMRT)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFizra)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMRT)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOtkaz2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMED)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOtkaz)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -618,7 +618,7 @@ namespace Project
             this.label9writecomplaint.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label9writecomplaint.Location = new System.Drawing.Point(11, 95);
             this.label9writecomplaint.Name = "label9writecomplaint";
-            this.label9writecomplaint.Size = new System.Drawing.Size(313, 23);
+            this.label9writecomplaint.Size = new System.Drawing.Size(525, 23);
             this.label9writecomplaint.TabIndex = 3;
             this.label9writecomplaint.Text = "Ниже напишите вашу жалобу";
             // 
@@ -670,56 +670,64 @@ namespace Project
             this.tabPage1.TabIndex = 6;
             this.tabPage1.Text = "Медицинские бланки";
             // 
-            // timer1Date
+            // label5
             // 
-            this.timer1Date.Tick += new System.EventHandler(this.timer1_Tick);
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label5.Location = new System.Drawing.Point(956, 321);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(165, 40);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "Отказ от\r\n госпитализации";
             // 
-            // pictureBoxOtkaz
+            // label4
             // 
-            this.pictureBoxOtkaz.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxOtkaz.Image")));
-            this.pictureBoxOtkaz.Location = new System.Drawing.Point(29, 82);
-            this.pictureBoxOtkaz.Name = "pictureBoxOtkaz";
-            this.pictureBoxOtkaz.Size = new System.Drawing.Size(180, 212);
-            this.pictureBoxOtkaz.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxOtkaz.TabIndex = 0;
-            this.pictureBoxOtkaz.TabStop = false;
-            this.pictureBoxOtkaz.Click += new System.EventHandler(this.pictureBoxOtkaz_Click);
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label4.Location = new System.Drawing.Point(750, 321);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(133, 60);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Согласие на\r\n проведение \r\n       МРТ";
             // 
-            // pictureBoxMED
+            // label3
             // 
-            this.pictureBoxMED.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxMED.Image")));
-            this.pictureBoxMED.Location = new System.Drawing.Point(503, 82);
-            this.pictureBoxMED.Name = "pictureBoxMED";
-            this.pictureBoxMED.Size = new System.Drawing.Size(162, 212);
-            this.pictureBoxMED.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxMED.TabIndex = 1;
-            this.pictureBoxMED.TabStop = false;
-            this.pictureBoxMED.Click += new System.EventHandler(this.pictureBoxMED_Click);
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.Location = new System.Drawing.Point(540, 324);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(157, 60);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Согласие на\r\nмедицинское \r\nвмешательство";
             // 
-            // pictureBoxOtkaz2
+            // label2
             // 
-            this.pictureBoxOtkaz2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxOtkaz2.Image")));
-            this.pictureBoxOtkaz2.Location = new System.Drawing.Point(944, 82);
-            this.pictureBoxOtkaz2.Name = "pictureBoxOtkaz2";
-            this.pictureBoxOtkaz2.Size = new System.Drawing.Size(147, 212);
-            this.pictureBoxOtkaz2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxOtkaz2.TabIndex = 2;
-            this.pictureBoxOtkaz2.TabStop = false;
-            this.pictureBoxOtkaz2.Click += new System.EventHandler(this.pictureBoxOtkaz2_Click);
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.Location = new System.Drawing.Point(269, 324);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(244, 40);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Освобождение от уроков\r\n Физической культуры";
             // 
-            // pictureBoxMRT
+            // label1
             // 
-            this.pictureBoxMRT.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxMRT.Image")));
-            this.pictureBoxMRT.Location = new System.Drawing.Point(731, 82);
-            this.pictureBoxMRT.Name = "pictureBoxMRT";
-            this.pictureBoxMRT.Size = new System.Drawing.Size(157, 212);
-            this.pictureBoxMRT.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxMRT.TabIndex = 3;
-            this.pictureBoxMRT.TabStop = false;
-            this.pictureBoxMRT.Click += new System.EventHandler(this.pictureBoxMRT_Click);
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(24, 333);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(208, 20);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Отказ от вакцинации";
             // 
             // pictureBoxFizra
             // 
+            this.pictureBoxFizra.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBoxFizra.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxFizra.Image")));
             this.pictureBoxFizra.Location = new System.Drawing.Point(272, 82);
             this.pictureBoxFizra.Name = "pictureBoxFizra";
@@ -729,50 +737,57 @@ namespace Project
             this.pictureBoxFizra.TabStop = false;
             this.pictureBoxFizra.Click += new System.EventHandler(this.pictureBoxFizra_Click);
             // 
-            // label1
+            // pictureBoxMRT
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(50, 324);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(149, 17);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Отказ от вакцинации";
+            this.pictureBoxMRT.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBoxMRT.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxMRT.Image")));
+            this.pictureBoxMRT.Location = new System.Drawing.Point(731, 82);
+            this.pictureBoxMRT.Name = "pictureBoxMRT";
+            this.pictureBoxMRT.Size = new System.Drawing.Size(157, 212);
+            this.pictureBoxMRT.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxMRT.TabIndex = 3;
+            this.pictureBoxMRT.TabStop = false;
+            this.pictureBoxMRT.Click += new System.EventHandler(this.pictureBoxMRT_Click);
             // 
-            // label2
+            // pictureBoxOtkaz2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(269, 324);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(174, 34);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Освобождение от уроков\r\n Физической культуры";
+            this.pictureBoxOtkaz2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBoxOtkaz2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxOtkaz2.Image")));
+            this.pictureBoxOtkaz2.Location = new System.Drawing.Point(944, 82);
+            this.pictureBoxOtkaz2.Name = "pictureBoxOtkaz2";
+            this.pictureBoxOtkaz2.Size = new System.Drawing.Size(147, 212);
+            this.pictureBoxOtkaz2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxOtkaz2.TabIndex = 2;
+            this.pictureBoxOtkaz2.TabStop = false;
+            this.pictureBoxOtkaz2.Click += new System.EventHandler(this.pictureBoxOtkaz2_Click);
             // 
-            // label3
+            // pictureBoxMED
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(540, 324);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(110, 51);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "Согласие на\r\nмедицинское \r\nвмешательство";
+            this.pictureBoxMED.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBoxMED.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxMED.Image")));
+            this.pictureBoxMED.Location = new System.Drawing.Point(503, 82);
+            this.pictureBoxMED.Name = "pictureBoxMED";
+            this.pictureBoxMED.Size = new System.Drawing.Size(162, 212);
+            this.pictureBoxMED.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxMED.TabIndex = 1;
+            this.pictureBoxMED.TabStop = false;
+            this.pictureBoxMED.Click += new System.EventHandler(this.pictureBoxMED_Click);
             // 
-            // label4
+            // pictureBoxOtkaz
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(728, 324);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(176, 34);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "Согласие на проведение \r\n             МРТ";
+            this.pictureBoxOtkaz.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBoxOtkaz.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxOtkaz.Image")));
+            this.pictureBoxOtkaz.Location = new System.Drawing.Point(29, 82);
+            this.pictureBoxOtkaz.Name = "pictureBoxOtkaz";
+            this.pictureBoxOtkaz.Size = new System.Drawing.Size(180, 212);
+            this.pictureBoxOtkaz.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxOtkaz.TabIndex = 0;
+            this.pictureBoxOtkaz.TabStop = false;
+            this.pictureBoxOtkaz.Click += new System.EventHandler(this.pictureBoxOtkaz_Click);
             // 
-            // label5
+            // timer1Date
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(941, 324);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(177, 17);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "Отказ от госпитализации";
+            this.timer1Date.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // MainForm
             // 
@@ -805,11 +820,11 @@ namespace Project
             this.tabPage6complaintbook.PerformLayout();
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOtkaz)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMED)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOtkaz2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMRT)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFizra)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMRT)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOtkaz2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMED)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOtkaz)).EndInit();
             this.ResumeLayout(false);
 
         }

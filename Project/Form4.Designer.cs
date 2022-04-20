@@ -29,67 +29,77 @@ namespace Project
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form4));
+            this.labelFIO = new System.Windows.Forms.Label();
+            this.labelMED = new System.Windows.Forms.Label();
+            this.textBoxFIO = new System.Windows.Forms.TextBox();
+            this.textBoxNAME = new System.Windows.Forms.TextBox();
+            this.buttonSAVE = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // label1
+            // labelFIO
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(111, 173);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(42, 17);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "ФИО";
+            this.labelFIO.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelFIO.AutoSize = true;
+            this.labelFIO.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelFIO.Location = new System.Drawing.Point(111, 148);
+            this.labelFIO.Name = "labelFIO";
+            this.labelFIO.Size = new System.Drawing.Size(60, 25);
+            this.labelFIO.TabIndex = 8;
+            this.labelFIO.Text = "ФИО";
             // 
-            // label2
+            // labelMED
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(111, 257);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(145, 17);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "Медицинская группа";
+            this.labelMED.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelMED.AutoSize = true;
+            this.labelMED.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelMED.Location = new System.Drawing.Point(111, 235);
+            this.labelMED.Name = "labelMED";
+            this.labelMED.Size = new System.Drawing.Size(202, 25);
+            this.labelMED.TabIndex = 9;
+            this.labelMED.Text = "Медицинская группа";
             // 
-            // textBox1
+            // textBoxFIO
             // 
-            this.textBox1.Location = new System.Drawing.Point(363, 167);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
-            this.textBox1.TabIndex = 10;
+            this.textBoxFIO.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxFIO.Location = new System.Drawing.Point(373, 148);
+            this.textBoxFIO.Name = "textBoxFIO";
+            this.textBoxFIO.Size = new System.Drawing.Size(298, 22);
+            this.textBoxFIO.TabIndex = 10;
             // 
-            // textBox2
+            // textBoxNAME
             // 
-            this.textBox2.Location = new System.Drawing.Point(386, 257);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 22);
-            this.textBox2.TabIndex = 11;
+            this.textBoxNAME.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxNAME.Location = new System.Drawing.Point(373, 238);
+            this.textBoxNAME.Name = "textBoxNAME";
+            this.textBoxNAME.Size = new System.Drawing.Size(298, 22);
+            this.textBoxNAME.TabIndex = 11;
             // 
-            // button1
+            // buttonSAVE
             // 
-            this.button1.Location = new System.Drawing.Point(596, 370);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.buttonSAVE.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.buttonSAVE.Location = new System.Drawing.Point(610, 382);
+            this.buttonSAVE.Name = "buttonSAVE";
+            this.buttonSAVE.Size = new System.Drawing.Size(134, 41);
+            this.buttonSAVE.TabIndex = 12;
+            this.buttonSAVE.Text = "Сохранить";
+            this.buttonSAVE.UseVisualStyleBackColor = true;
+            this.buttonSAVE.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.SlateGray;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.buttonSAVE);
+            this.Controls.Add(this.textBoxNAME);
+            this.Controls.Add(this.textBoxFIO);
+            this.Controls.Add(this.labelMED);
+            this.Controls.Add(this.labelFIO);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form4";
-            this.Text = "Form4";
+            this.Text = "Освобождение от уроков физкультуры";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -97,10 +107,10 @@ namespace Project
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label labelFIO;
+        private System.Windows.Forms.Label labelMED;
+        private System.Windows.Forms.TextBox textBoxFIO;
+        private System.Windows.Forms.TextBox textBoxNAME;
+        private System.Windows.Forms.Button buttonSAVE;
     }
 }
