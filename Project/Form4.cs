@@ -52,6 +52,9 @@ namespace Project
                 doc = null;
 
                 MessageBox.Show("Файл успешно сохранен!");
+
+                textBoxFIO.Clear();
+                textBoxNAME.Clear();
             }
             catch (Exception ex)
             {

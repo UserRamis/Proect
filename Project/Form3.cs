@@ -51,7 +51,16 @@ namespace Project
                 doc.Close();
                 doc = null;
 
+                
                 MessageBox.Show("Файл успешно сохранен!");
+
+                textBoxFIO.Clear();
+                textBoxData.Clear();
+                textBoxMonth.Clear();
+                textBoxYear.Clear(); 
+                textBoxAdres.Clear();
+                textBoxFIOMED.Clear();
+                textBoxVAK.Clear();
             }
             catch (Exception ex)
             {

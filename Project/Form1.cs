@@ -47,12 +47,6 @@ namespace Project
             timer1Date.Interval = 10;
             timer1Date.Enabled = true;
             timer1Date.Start();
-
-
-
-
-
-
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -61,11 +55,7 @@ namespace Project
             label4Time.Text = DateTime.Now.ToLongTimeString();
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
+      
         private void button5_Click(object sender, EventArgs e)
         {
             sqlConnection = new SqlConnection(@"Data Source=DESKTOP-AJR95T9\SQLEXPRESS; Initial Catalog=Hospital;Integrated Security=true ");
@@ -73,10 +63,6 @@ namespace Project
             sqlConnection.Open();
 
             LoadData1();
-
-
-
-
 
         }
 
@@ -251,10 +237,6 @@ namespace Project
             sqlConnection.Open();
 
             LoadData2();
-
-
-
-
         }
 
         private void LoadData2()
@@ -423,7 +405,7 @@ namespace Project
         {
             using (StreamWriter w = File.AppendText(@"Жалобная книга.txt"))
             {
-                w.WriteLine("ФИО: " + textBox1bookFIO.Text + "\n" + "Жалоба: " + textBox2writecomplaint.Text);
+                w.WriteLine("\n" + "ФИО: " + textBox1bookFIO.Text + "\n" + "Жалоба: " + textBox2writecomplaint.Text);
             }
 
             SqlConnection sqlConnection123 = new SqlConnection(@"Data Source=DESKTOP-AJR95T9\SQLEXPRESS; Initial Catalog=Hospital;Integrated Security=true ");
@@ -439,8 +421,8 @@ namespace Project
         private void button7_Click(object sender, EventArgs e)
         {
             // задаем текст для печати
-            result = textBox1bookFIO.Text;
-            result += textBox2writecomplaint.Text;
+            result = "ФИО "+textBox1bookFIO.Text;
+            result += "Жалоба "+textBox2writecomplaint.Text;
             // объект для печати
 
             // обработчик события печати
@@ -476,7 +458,7 @@ namespace Project
 
             using (StreamWriter w1 = File.AppendText(@"Записи на прием.txt"))
             {
-                w1.WriteLine("ФИО: " + textBox3FIO.Text + "\n" + "Возраст: " + textBox4age.Text + "\nСНИЛС: " + textBox5snils.Text + "\nАдрес: " + textBox6addres.Text + "\nСимптомы: " + textBox7symptoms.Text);
+                w1.WriteLine("\n" + "ФИО: " + textBox3FIO.Text + "\n" + "Возраст: " + textBox4age.Text + "\nСНИЛС: " + textBox5snils.Text + "\nАдрес: " + textBox6addres.Text + "\nСимптомы: " + textBox7symptoms.Text);
             }
 
             textBox3FIO.Clear();
@@ -484,24 +466,17 @@ namespace Project
             textBox5snils.Clear();
             textBox6addres.Clear();
             textBox7symptoms.Clear();
-
-
         }
 
         private void button9_Click(object sender, EventArgs e)
         {
-
-            result = textBox3FIO.Text;
-            result += textBox4age.Text;
-            result += textBox5snils.Text;
-            result += textBox6addres.Text;
-            result += textBox7symptoms.Text;
-
-
+            result = "ФИО "+textBox3FIO.Text;
+            result += "Возраст "+textBox4age.Text;
+            result += "СНИЛС "+textBox5snils.Text;
+            result += "Адрес "+textBox6addres.Text;
+            result += "Симптомы "+textBox7symptoms.Text;
 
             printDocument.PrintPage += PrintPageHandler;
-
-
 
             printDialog.Document = printDocument;
 
@@ -514,10 +489,7 @@ namespace Project
             tabControl1.SelectTab(tabPage6complaintbook);
         }
 
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
@@ -537,9 +509,7 @@ namespace Project
                     column.SortMode = DataGridViewColumnSortMode.NotSortable;
                 }
                 LoadData1();
-
             }
-
         }
 
         private void checkBox2_CheckedChanged(object sender, EventArgs e)
@@ -560,7 +530,6 @@ namespace Project
                     column.SortMode = DataGridViewColumnSortMode.NotSortable;
                 }
                 LoadData2();
-
             }
         }
 
@@ -601,4 +570,3 @@ namespace Project
 
 
 
-//@"C:\Users\user9\Desktop\inform.DOCX";

@@ -163,7 +163,7 @@ namespace Project
             this.labelFIOMED.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelFIOMED.AutoSize = true;
             this.labelFIOMED.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelFIOMED.Location = new System.Drawing.Point(78, 303);
+            this.labelFIOMED.Location = new System.Drawing.Point(49, 303);
             this.labelFIOMED.Name = "labelFIOMED";
             this.labelFIOMED.Size = new System.Drawing.Size(178, 20);
             this.labelFIOMED.TabIndex = 12;
