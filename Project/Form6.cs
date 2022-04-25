@@ -62,8 +62,7 @@ namespace Project
                 // закрываем документ и выводим информацию
                 doc.Close();
                 doc = null;
-                Console.WriteLine("Во время выполнения произошла ошибка!");
-                Console.ReadLine();
+                MessageBox.Show("Произошла ошибка!");
             }
         }
     }

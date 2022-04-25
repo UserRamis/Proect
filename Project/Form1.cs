@@ -34,7 +34,7 @@ namespace Project
 
         PrintDialog printDialog = new PrintDialog();
 
-
+        
         public MainForm()
         {
 
@@ -100,15 +100,11 @@ namespace Project
                 MessageBox.Show(ex.Message, "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-
             foreach (DataGridViewColumn column in dataGridViewEmployee.Columns)
             {
                 column.SortMode = DataGridViewColumnSortMode.NotSortable;
                 checkBoxEmployee.Text = "Включить сортировку";
             }
-
-
-
         }
 
 
