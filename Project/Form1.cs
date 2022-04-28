@@ -457,11 +457,11 @@ namespace Project
                 w1.WriteLine("\n" + "ФИО: " + textBox3FIO.Text + "\n" + "Возраст: " + textBox4age.Text + "\nСНИЛС: " + textBox5snils.Text + "\nАдрес: " + textBox6addres.Text + "\nСимптомы: " + textBox7symptoms.Text);
             }
 
-            textBox3FIO.Clear();
-            textBox4age.Clear();
-            textBox5snils.Clear();
-            textBox6addres.Clear();
-            textBox7symptoms.Clear();
+            //textBox3FIO.Clear();
+            //textBox4age.Clear();
+            //textBox5snils.Clear();
+            //textBox6addres.Clear();
+            //textBox7symptoms.Clear();
         }
 
         private void button9_Click(object sender, EventArgs e)
@@ -557,6 +557,15 @@ namespace Project
         {
             Form7 form7 = new Form7();
             form7.Show();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            textBox3FIO.Clear();
+            textBox4age.Clear();
+            textBox5snils.Clear();
+            textBox6addres.Clear();
+            textBox7symptoms.Clear();
         }
     }
 

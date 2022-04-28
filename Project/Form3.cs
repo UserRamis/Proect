@@ -51,7 +51,7 @@ namespace Project
                 doc.Close();
                 doc = null;
 
-                
+
                 MessageBox.Show("Файл успешно сохранен!");
 
                 textBoxFIO.Clear();

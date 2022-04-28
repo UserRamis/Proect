@@ -89,6 +89,7 @@ namespace Project
             this.pictureBoxMED = new System.Windows.Forms.PictureBox();
             this.pictureBoxOtkaz = new System.Windows.Forms.PictureBox();
             this.timer1Date = new System.Windows.Forms.Timer(this.components);
+            this.button1 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1Main.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxHosp)).BeginInit();
@@ -426,6 +427,7 @@ namespace Project
             // tabPage5Record
             // 
             this.tabPage5Record.BackColor = System.Drawing.Color.SlateGray;
+            this.tabPage5Record.Controls.Add(this.button1);
             this.tabPage5Record.Controls.Add(this.label15announcementreception);
             this.tabPage5Record.Controls.Add(this.button9Printreception);
             this.tabPage5Record.Controls.Add(this.button8savereception);
@@ -791,6 +793,17 @@ namespace Project
             // 
             this.timer1Date.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // button1
+            // 
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.button1.Location = new System.Drawing.Point(532, 430);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(122, 47);
+            this.button1.TabIndex = 17;
+            this.button1.Text = "Очистить";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -891,6 +904,7 @@ namespace Project
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button1;
     }
 }
 

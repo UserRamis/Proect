@@ -46,6 +46,12 @@ namespace Project
             else
             {
                 MessageBox.Show("Неправильный логин или пароль! Повторите вход, иначе доступ к системе будет закрыт.");
+                textBox1Login.Clear();
+                textBox2Password.Clear();
+
+
+
+
             }
         }
 
