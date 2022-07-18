@@ -57,9 +57,10 @@ namespace Project
             this.buttonunload1 = new System.Windows.Forms.Button();
             this.dataGridViewPatients = new System.Windows.Forms.DataGridView();
             this.tabPage5Record = new System.Windows.Forms.TabPage();
+            this.buttonClean = new System.Windows.Forms.Button();
             this.label15announcementreception = new System.Windows.Forms.Label();
-            this.button9Printreception = new System.Windows.Forms.Button();
-            this.button8savereception = new System.Windows.Forms.Button();
+            this.buttonPrintreception = new System.Windows.Forms.Button();
+            this.buttonsavereception = new System.Windows.Forms.Button();
             this.textBox7symptoms = new System.Windows.Forms.TextBox();
             this.textBox6addres = new System.Windows.Forms.TextBox();
             this.textBox5snils = new System.Windows.Forms.TextBox();
@@ -71,8 +72,8 @@ namespace Project
             this.label11Age = new System.Windows.Forms.Label();
             this.label10FIO = new System.Windows.Forms.Label();
             this.tabPage6complaintbook = new System.Windows.Forms.TabPage();
-            this.button7printwritecomplaint = new System.Windows.Forms.Button();
-            this.button4savewritecomplaint = new System.Windows.Forms.Button();
+            this.buttonprintwritecomplaint = new System.Windows.Forms.Button();
+            this.buttonsavewritecomplaint = new System.Windows.Forms.Button();
             this.label9writecomplaint = new System.Windows.Forms.Label();
             this.textBox2writecomplaint = new System.Windows.Forms.TextBox();
             this.textBox1bookFIO = new System.Windows.Forms.TextBox();
@@ -89,7 +90,6 @@ namespace Project
             this.pictureBoxMED = new System.Windows.Forms.PictureBox();
             this.pictureBoxOtkaz = new System.Windows.Forms.PictureBox();
             this.timer1Date = new System.Windows.Forms.Timer(this.components);
-            this.button1 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1Main.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxHosp)).BeginInit();
@@ -130,7 +130,7 @@ namespace Project
             // 
             // tabPage1Main
             // 
-            this.tabPage1Main.BackColor = System.Drawing.Color.SlateGray;
+            this.tabPage1Main.BackColor = System.Drawing.Color.Azure;
             this.tabPage1Main.Controls.Add(this.label6Time);
             this.tabPage1Main.Controls.Add(this.label5Date);
             this.tabPage1Main.Controls.Add(this.label4Time);
@@ -250,7 +250,7 @@ namespace Project
             // 
             // tabPage2Employee
             // 
-            this.tabPage2Employee.BackColor = System.Drawing.Color.SlateGray;
+            this.tabPage2Employee.BackColor = System.Drawing.SystemColors.Control;
             this.tabPage2Employee.Controls.Add(this.checkBoxEmployee);
             this.tabPage2Employee.Controls.Add(this.button6updateEmployee);
             this.tabPage2Employee.Controls.Add(this.dataGridViewEmployee);
@@ -285,7 +285,7 @@ namespace Project
             this.button6updateEmployee.TabIndex = 6;
             this.button6updateEmployee.Text = "Обновить список";
             this.button6updateEmployee.UseVisualStyleBackColor = true;
-            this.button6updateEmployee.Click += new System.EventHandler(this.button6_Click);
+            this.button6updateEmployee.Click += new System.EventHandler(this.button6updateEmployee_Click);
             // 
             // dataGridViewEmployee
             // 
@@ -312,7 +312,7 @@ namespace Project
             this.buttonEmployee.TabIndex = 4;
             this.buttonEmployee.Text = "Выгрузить список";
             this.buttonEmployee.UseVisualStyleBackColor = true;
-            this.buttonEmployee.Click += new System.EventHandler(this.button5_Click);
+            this.buttonEmployee.Click += new System.EventHandler(this.buttonEmployee_Click);
             // 
             // tabPage3WorkLoad
             // 
@@ -362,7 +362,7 @@ namespace Project
             // 
             // tabPage4Patients
             // 
-            this.tabPage4Patients.BackColor = System.Drawing.Color.SlateGray;
+            this.tabPage4Patients.BackColor = System.Drawing.SystemColors.Control;
             this.tabPage4Patients.Controls.Add(this.checkBoxPatients);
             this.tabPage4Patients.Controls.Add(this.button3unloadpatients);
             this.tabPage4Patients.Controls.Add(this.buttonunload1);
@@ -396,7 +396,7 @@ namespace Project
             this.button3unloadpatients.TabIndex = 2;
             this.button3unloadpatients.Text = "Обновить список";
             this.button3unloadpatients.UseVisualStyleBackColor = true;
-            this.button3unloadpatients.Click += new System.EventHandler(this.button3_Click);
+            this.button3unloadpatients.Click += new System.EventHandler(this.button3unloadpatients_Click);
             // 
             // buttonunload1
             // 
@@ -407,7 +407,7 @@ namespace Project
             this.buttonunload1.TabIndex = 1;
             this.buttonunload1.Text = "Выгрузить список";
             this.buttonunload1.UseVisualStyleBackColor = true;
-            this.buttonunload1.Click += new System.EventHandler(this.button2_Click_1);
+            this.buttonunload1.Click += new System.EventHandler(this.buttonunload1_Click_1);
             // 
             // dataGridViewPatients
             // 
@@ -426,11 +426,11 @@ namespace Project
             // 
             // tabPage5Record
             // 
-            this.tabPage5Record.BackColor = System.Drawing.Color.SlateGray;
-            this.tabPage5Record.Controls.Add(this.button1);
+            this.tabPage5Record.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage5Record.Controls.Add(this.buttonClean);
             this.tabPage5Record.Controls.Add(this.label15announcementreception);
-            this.tabPage5Record.Controls.Add(this.button9Printreception);
-            this.tabPage5Record.Controls.Add(this.button8savereception);
+            this.tabPage5Record.Controls.Add(this.buttonPrintreception);
+            this.tabPage5Record.Controls.Add(this.buttonsavereception);
             this.tabPage5Record.Controls.Add(this.textBox7symptoms);
             this.tabPage5Record.Controls.Add(this.textBox6addres);
             this.tabPage5Record.Controls.Add(this.textBox5snils);
@@ -448,6 +448,17 @@ namespace Project
             this.tabPage5Record.TabIndex = 4;
             this.tabPage5Record.Text = "Запись на приём";
             // 
+            // buttonClean
+            // 
+            this.buttonClean.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.buttonClean.Location = new System.Drawing.Point(532, 430);
+            this.buttonClean.Name = "buttonClean";
+            this.buttonClean.Size = new System.Drawing.Size(122, 47);
+            this.buttonClean.TabIndex = 17;
+            this.buttonClean.Text = "Очистить";
+            this.buttonClean.UseVisualStyleBackColor = true;
+            this.buttonClean.Click += new System.EventHandler(this.buttonClean_Click_1);
+            // 
             // label15announcementreception
             // 
             this.label15announcementreception.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -459,29 +470,29 @@ namespace Project
             this.label15announcementreception.Text = "Уважаемые сотрудники! Запись на приём осуществялется строго в будние дни с 7:00 д" +
     "о 16:30.\r\n";
             // 
-            // button9Printreception
+            // buttonPrintreception
             // 
-            this.button9Printreception.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.button9Printreception.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button9Printreception.Location = new System.Drawing.Point(692, 400);
-            this.button9Printreception.Name = "button9Printreception";
-            this.button9Printreception.Size = new System.Drawing.Size(185, 77);
-            this.button9Printreception.TabIndex = 15;
-            this.button9Printreception.Text = "Печать направления";
-            this.button9Printreception.UseVisualStyleBackColor = true;
-            this.button9Printreception.Click += new System.EventHandler(this.button9_Click);
+            this.buttonPrintreception.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.buttonPrintreception.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonPrintreception.Location = new System.Drawing.Point(692, 400);
+            this.buttonPrintreception.Name = "buttonPrintreception";
+            this.buttonPrintreception.Size = new System.Drawing.Size(185, 77);
+            this.buttonPrintreception.TabIndex = 15;
+            this.buttonPrintreception.Text = "Печать направления";
+            this.buttonPrintreception.UseVisualStyleBackColor = true;
+            this.buttonPrintreception.Click += new System.EventHandler(this.buttonPrintreception_Click);
             // 
-            // button8savereception
+            // buttonsavereception
             // 
-            this.button8savereception.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.button8savereception.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button8savereception.Location = new System.Drawing.Point(972, 400);
-            this.button8savereception.Name = "button8savereception";
-            this.button8savereception.Size = new System.Drawing.Size(264, 77);
-            this.button8savereception.TabIndex = 14;
-            this.button8savereception.Text = "Сохранить в базу данных и в файл";
-            this.button8savereception.UseVisualStyleBackColor = true;
-            this.button8savereception.Click += new System.EventHandler(this.button8_Click);
+            this.buttonsavereception.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.buttonsavereception.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonsavereception.Location = new System.Drawing.Point(972, 400);
+            this.buttonsavereception.Name = "buttonsavereception";
+            this.buttonsavereception.Size = new System.Drawing.Size(264, 77);
+            this.buttonsavereception.TabIndex = 14;
+            this.buttonsavereception.Text = "Сохранить в базу данных и в файл";
+            this.buttonsavereception.UseVisualStyleBackColor = true;
+            this.buttonsavereception.Click += new System.EventHandler(this.buttonsavereception_Click);
             // 
             // textBox7symptoms
             // 
@@ -580,9 +591,9 @@ namespace Project
             // 
             // tabPage6complaintbook
             // 
-            this.tabPage6complaintbook.BackColor = System.Drawing.Color.SlateGray;
-            this.tabPage6complaintbook.Controls.Add(this.button7printwritecomplaint);
-            this.tabPage6complaintbook.Controls.Add(this.button4savewritecomplaint);
+            this.tabPage6complaintbook.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage6complaintbook.Controls.Add(this.buttonprintwritecomplaint);
+            this.tabPage6complaintbook.Controls.Add(this.buttonsavewritecomplaint);
             this.tabPage6complaintbook.Controls.Add(this.label9writecomplaint);
             this.tabPage6complaintbook.Controls.Add(this.textBox2writecomplaint);
             this.tabPage6complaintbook.Controls.Add(this.textBox1bookFIO);
@@ -594,27 +605,27 @@ namespace Project
             this.tabPage6complaintbook.TabIndex = 5;
             this.tabPage6complaintbook.Text = "Жалобная книга";
             // 
-            // button7printwritecomplaint
+            // buttonprintwritecomplaint
             // 
-            this.button7printwritecomplaint.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.button7printwritecomplaint.Location = new System.Drawing.Point(602, 416);
-            this.button7printwritecomplaint.Name = "button7printwritecomplaint";
-            this.button7printwritecomplaint.Size = new System.Drawing.Size(162, 47);
-            this.button7printwritecomplaint.TabIndex = 5;
-            this.button7printwritecomplaint.Text = "Распечатать";
-            this.button7printwritecomplaint.UseVisualStyleBackColor = true;
-            this.button7printwritecomplaint.Click += new System.EventHandler(this.button7_Click);
+            this.buttonprintwritecomplaint.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.buttonprintwritecomplaint.Location = new System.Drawing.Point(602, 416);
+            this.buttonprintwritecomplaint.Name = "buttonprintwritecomplaint";
+            this.buttonprintwritecomplaint.Size = new System.Drawing.Size(162, 47);
+            this.buttonprintwritecomplaint.TabIndex = 5;
+            this.buttonprintwritecomplaint.Text = "Распечатать";
+            this.buttonprintwritecomplaint.UseVisualStyleBackColor = true;
+            this.buttonprintwritecomplaint.Click += new System.EventHandler(this.buttonprintwritecomplaint_Click);
             // 
-            // button4savewritecomplaint
+            // buttonsavewritecomplaint
             // 
-            this.button4savewritecomplaint.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.button4savewritecomplaint.Location = new System.Drawing.Point(947, 416);
-            this.button4savewritecomplaint.Name = "button4savewritecomplaint";
-            this.button4savewritecomplaint.Size = new System.Drawing.Size(255, 48);
-            this.button4savewritecomplaint.TabIndex = 4;
-            this.button4savewritecomplaint.Text = "Сохранить и отправить в базу данных";
-            this.button4savewritecomplaint.UseVisualStyleBackColor = true;
-            this.button4savewritecomplaint.Click += new System.EventHandler(this.button4_Click);
+            this.buttonsavewritecomplaint.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.buttonsavewritecomplaint.Location = new System.Drawing.Point(947, 416);
+            this.buttonsavewritecomplaint.Name = "buttonsavewritecomplaint";
+            this.buttonsavewritecomplaint.Size = new System.Drawing.Size(255, 48);
+            this.buttonsavewritecomplaint.TabIndex = 4;
+            this.buttonsavewritecomplaint.Text = "Сохранить и отправить в базу данных";
+            this.buttonsavewritecomplaint.UseVisualStyleBackColor = true;
+            this.buttonsavewritecomplaint.Click += new System.EventHandler(this.buttonsavewritecomplaint_Click);
             // 
             // label9writecomplaint
             // 
@@ -656,7 +667,7 @@ namespace Project
             // 
             // tabPage1
             // 
-            this.tabPage1.BackColor = System.Drawing.Color.SlateGray;
+            this.tabPage1.BackColor = System.Drawing.SystemColors.Control;
             this.tabPage1.Controls.Add(this.label5);
             this.tabPage1.Controls.Add(this.label4);
             this.tabPage1.Controls.Add(this.label3);
@@ -793,17 +804,6 @@ namespace Project
             // 
             this.timer1Date.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // button1
-            // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.button1.Location = new System.Drawing.Point(532, 430);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(122, 47);
-            this.button1.TabIndex = 17;
-            this.button1.Text = "Очистить";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -876,9 +876,9 @@ namespace Project
         private System.Windows.Forms.TextBox textBox2writecomplaint;
         private System.Windows.Forms.TextBox textBox1bookFIO;
         private System.Windows.Forms.Label label8bookFIO;
-        private System.Windows.Forms.Button button4savewritecomplaint;
-        private System.Windows.Forms.Button button7printwritecomplaint;
-        private System.Windows.Forms.Button button8savereception;
+        private System.Windows.Forms.Button buttonsavewritecomplaint;
+        private System.Windows.Forms.Button buttonprintwritecomplaint;
+        private System.Windows.Forms.Button buttonsavereception;
         private System.Windows.Forms.TextBox textBox7symptoms;
         private System.Windows.Forms.TextBox textBox6addres;
         private System.Windows.Forms.TextBox textBox5snils;
@@ -889,7 +889,7 @@ namespace Project
         private System.Windows.Forms.Label label12SNILS;
         private System.Windows.Forms.Label label11Age;
         private System.Windows.Forms.Label label10FIO;
-        private System.Windows.Forms.Button button9Printreception;
+        private System.Windows.Forms.Button buttonPrintreception;
         private System.Windows.Forms.Label label15announcementreception;
         private System.Windows.Forms.CheckBox checkBoxEmployee;
         private System.Windows.Forms.CheckBox checkBoxPatients;
@@ -904,7 +904,7 @@ namespace Project
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonClean;
     }
 }
 

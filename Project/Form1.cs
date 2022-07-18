@@ -55,20 +55,6 @@ namespace Project
             label4Time.Text = DateTime.Now.ToLongTimeString();
         }
 
-      
-        private void button5_Click(object sender, EventArgs e)
-        {
-            sqlConnection = new SqlConnection(@"Data Source=DESKTOP-AJR95T9\SQLEXPRESS; Initial Catalog=Hospital;Integrated Security=true ");
-
-            sqlConnection.Open();
-
-            LoadData1();
-
-        }
-
-
-
-
         private void LoadData1()
         {
             try
@@ -108,7 +94,6 @@ namespace Project
         }
 
 
-
         private void ReloadData1()
         {
             try
@@ -133,10 +118,7 @@ namespace Project
             }
         }
 
-        private void button6_Click(object sender, EventArgs e)
-        {
-            ReloadData1();
-        }
+      
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -226,15 +208,7 @@ namespace Project
             }
         }
         //datagridview2
-        private void button2_Click_1(object sender, EventArgs e)
-        {
-            sqlConnection = new SqlConnection(@"Data Source=DESKTOP-AJR95T9\SQLEXPRESS; Initial Catalog=Hospital;Integrated Security=true ");
-
-            sqlConnection.Open();
-
-            LoadData2();
-        }
-
+   
         private void LoadData2()
         {
             try
@@ -387,50 +361,7 @@ namespace Project
             }
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            ReloadData2();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            tabControl1.SelectTab(tabPage6complaintbook);
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            using (StreamWriter w = File.AppendText(@"Жалобная книга.txt"))
-            {
-                w.WriteLine("\n" + "ФИО: " + textBox1bookFIO.Text + "\n" + "Жалоба: " + textBox2writecomplaint.Text);
-            }
-
-            SqlConnection sqlConnection123 = new SqlConnection(@"Data Source=DESKTOP-AJR95T9\SQLEXPRESS; Initial Catalog=Hospital;Integrated Security=true ");
-            sqlConnection123.Open();
-            SqlCommand command123 = new SqlCommand($"INSERT INTO [Complaint book] (ФИО, Жалоба) VALUES (@ФИО, @Жалоба)", sqlConnection123);
-
-            command123.Parameters.AddWithValue("ФИО", textBox1bookFIO.Text);
-            command123.Parameters.AddWithValue("Жалоба", textBox2writecomplaint.Text);
-
-            MessageBox.Show("Успешно! Данные сохранены в базе данных и в файле", command123.ExecuteNonQuery().ToString());
-        }
-
-        private void button7_Click(object sender, EventArgs e)
-        {
-            // задаем текст для печати
-            result = "ФИО "+textBox1bookFIO.Text;
-            result += "Жалоба "+textBox2writecomplaint.Text;
-            // объект для печати
-
-            // обработчик события печати
-            printDocument.PrintPage += PrintPageHandler;
-            // диалог настройки печати
-
-            // установка объекта печати для его настройки
-            printDialog.Document = printDocument;
-            // если в диалоге было нажато ОК
-            if (printDialog.ShowDialog() == DialogResult.OK)
-                printDialog.Document.Print(); // печатаем
-        }
+    
 
         void PrintPageHandler(object sender, PrintPageEventArgs e)
         {
@@ -438,47 +369,7 @@ namespace Project
             e.Graphics.DrawString(result, new Font("Arial", 14), Brushes.Black, 0, 0);
         }
 
-        private void button8_Click(object sender, EventArgs e)
-        {
-            SqlConnection sqlConnection12 = new SqlConnection(@"Data Source=DESKTOP-AJR95T9\SQLEXPRESS; Initial Catalog=Hospital;Integrated Security=true ");
-            sqlConnection12.Open();
-            SqlCommand command12 = new SqlCommand($"INSERT INTO [Record] (ФИО, Возраст, СНИЛС, Адрес, Симптомы) VALUES (@ФИО, @Возраст, @СНИЛС, @Адрес, @Симптомы)", sqlConnection12);
-
-            command12.Parameters.AddWithValue("ФИО", textBox3FIO.Text);
-            command12.Parameters.AddWithValue("Возраст", textBox4age.Text);
-            command12.Parameters.AddWithValue("СНИЛС", textBox5snils.Text);
-            command12.Parameters.AddWithValue("Адрес", textBox6addres.Text);
-            command12.Parameters.AddWithValue("Симптомы", textBox7symptoms.Text);
-
-            MessageBox.Show("Успешно! Данные сохранены в базе данных и в файле", command12.ExecuteNonQuery().ToString());
-
-            using (StreamWriter w1 = File.AppendText(@"Записи на прием.txt"))
-            {
-                w1.WriteLine("\n" + "ФИО: " + textBox3FIO.Text + "\n" + "Возраст: " + textBox4age.Text + "\nСНИЛС: " + textBox5snils.Text + "\nАдрес: " + textBox6addres.Text + "\nСимптомы: " + textBox7symptoms.Text);
-            }
-
-            //textBox3FIO.Clear();
-            //textBox4age.Clear();
-            //textBox5snils.Clear();
-            //textBox6addres.Clear();
-            //textBox7symptoms.Clear();
-        }
-
-        private void button9_Click(object sender, EventArgs e)
-        {
-            result = "ФИО "+textBox3FIO.Text;
-            result += "Возраст "+textBox4age.Text;
-            result += "СНИЛС "+textBox5snils.Text;
-            result += "Адрес "+textBox6addres.Text;
-            result += "Симптомы "+textBox7symptoms.Text;
-
-            printDocument.PrintPage += PrintPageHandler;
-
-            printDialog.Document = printDocument;
-
-            if (printDialog.ShowDialog() == DialogResult.OK)
-                printDialog.Document.Print();
-        }
+        
 
         private void buttoncomplaintbook_Click(object sender, EventArgs e)
         {
@@ -566,6 +457,110 @@ namespace Project
             textBox5snils.Clear();
             textBox6addres.Clear();
             textBox7symptoms.Clear();
+        }
+
+        private void buttonEmployee_Click(object sender, EventArgs e)
+        {
+            sqlConnection = new SqlConnection(@"Data Source=DESKTOP-AJR95T9\SQLEXPRESS; Initial Catalog=Hospital;Integrated Security=true ");
+
+            sqlConnection.Open();
+
+            LoadData1();
+        }
+
+        private void button6updateEmployee_Click(object sender, EventArgs e)
+        {
+            ReloadData1();
+        }
+
+        private void buttonunload1_Click_1(object sender, EventArgs e)
+        {
+            sqlConnection = new SqlConnection(@"Data Source=DESKTOP-AJR95T9\SQLEXPRESS; Initial Catalog=Hospital;Integrated Security=true ");
+
+            sqlConnection.Open();
+
+            LoadData2();
+        }
+
+        private void button3unloadpatients_Click(object sender, EventArgs e)
+        {
+            ReloadData2();
+        }
+
+        private void buttonClean_Click_1(object sender, EventArgs e)
+        {
+            tabControl1.SelectTab(tabPage6complaintbook);
+        }
+
+        private void buttonPrintreception_Click(object sender, EventArgs e)
+        {
+            result = "ФИО " + textBox3FIO.Text;
+            result += "Возраст " + textBox4age.Text;
+            result += "СНИЛС " + textBox5snils.Text;
+            result += "Адрес " + textBox6addres.Text;
+            result += "Симптомы " + textBox7symptoms.Text;
+
+            printDocument.PrintPage += PrintPageHandler;
+
+            printDialog.Document = printDocument;
+
+            if (printDialog.ShowDialog() == DialogResult.OK)
+                printDialog.Document.Print();
+        }
+
+        private void buttonsavereception_Click(object sender, EventArgs e)
+        {
+            SqlConnection sqlConnection12 = new SqlConnection(@"Data Source=DESKTOP-AJR95T9\SQLEXPRESS; Initial Catalog=Hospital;Integrated Security=true ");
+            sqlConnection12.Open();
+            SqlCommand command12 = new SqlCommand($"INSERT INTO [Record] (ФИО, Возраст, СНИЛС, Адрес, Симптомы) VALUES (@ФИО, @Возраст, @СНИЛС, @Адрес, @Симптомы)", sqlConnection12);
+
+            command12.Parameters.AddWithValue("ФИО", textBox3FIO.Text);
+            command12.Parameters.AddWithValue("Возраст", textBox4age.Text);
+            command12.Parameters.AddWithValue("СНИЛС", textBox5snils.Text);
+            command12.Parameters.AddWithValue("Адрес", textBox6addres.Text);
+            command12.Parameters.AddWithValue("Симптомы", textBox7symptoms.Text);
+
+            MessageBox.Show("Успешно! Данные сохранены в базе данных и в файле", command12.ExecuteNonQuery().ToString());
+
+            using (StreamWriter w1 = File.AppendText(@"Записи на прием.txt"))
+            {
+                w1.WriteLine("\n" + "ФИО: " + textBox3FIO.Text + "\n" + "Возраст: " + textBox4age.Text + "\nСНИЛС: " + textBox5snils.Text + "\nАдрес: " + textBox6addres.Text + "\nСимптомы: " + textBox7symptoms.Text);
+            }
+        }
+
+        private void buttonprintwritecomplaint_Click(object sender, EventArgs e)
+        {
+            // задаем текст для печати
+            result = "ФИО " + textBox1bookFIO.Text;
+            result += "Жалоба " + textBox2writecomplaint.Text;
+            // объект для печати
+
+            // обработчик события печати
+            printDocument.PrintPage += PrintPageHandler;
+            // диалог настройки печати
+
+            // установка объекта печати для его настройки
+            printDialog.Document = printDocument;
+            // если в диалоге было нажато ОК
+            if (printDialog.ShowDialog() == DialogResult.OK)
+                printDialog.Document.Print(); // печатаем
+        }
+
+        private void buttonsavewritecomplaint_Click(object sender, EventArgs e)
+        {
+            using (StreamWriter w = File.AppendText(@"Жалобная книга.txt"))
+            {
+                w.WriteLine("\n" + "ФИО: " + textBox1bookFIO.Text + "\n" + "Жалоба: " + textBox2writecomplaint.Text);
+            }
+
+            SqlConnection sqlConnection123 = new SqlConnection(@"Data Source=DESKTOP-AJR95T9\SQLEXPRESS; Initial Catalog=Hospital;Integrated Security=true ");
+            sqlConnection123.Open();
+            SqlCommand command123 = new SqlCommand($"INSERT INTO [Complaint book] (ФИО, Жалоба) VALUES (@ФИО, @Жалоба)", sqlConnection123);
+
+            command123.Parameters.AddWithValue("ФИО", textBox1bookFIO.Text);
+            command123.Parameters.AddWithValue("Жалоба", textBox2writecomplaint.Text);
+
+            MessageBox.Show("Успешно! Данные сохранены в базе данных и в файле", command123.ExecuteNonQuery().ToString());
         }
     }
 
